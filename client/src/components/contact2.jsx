@@ -5,8 +5,7 @@ import useReactRouter from 'use-react-router';
 import { NotificationManager, NotificationContainer } from 'react-notifications';
 
 import '../utils/scss/pages/_contact.scss';
-import Header2 from './screens/Header/header2';
-import Footer from './footer';
+
 
 const { from } =  { from: { pathname: "/" } };
 

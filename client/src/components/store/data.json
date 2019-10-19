@@ -1,0 +1,16 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Kiddo Lowkiddo",
+      "description": "testing"
+
+    },
+    {
+      "id": 2,
+      "name": "Kiddo Lowkiddo",
+      "description": "testing"
+
+    }
+  ]
+}

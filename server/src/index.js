@@ -21,7 +21,7 @@ let app = express();
     } else
       next();
   }); */
-app.use(morgan('combined', { stream: winston.stream }));
+/* app.use(morgan('combined', { stream: winston.stream })); */
 
 app.use(morgan('dev'));
 app.use(express.static(CLIENT_PATH));

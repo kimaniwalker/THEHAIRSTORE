@@ -5,8 +5,7 @@ import { postCharge } from '../../../services/stripeService';
 import CardSection from '../../cardSection';
 import { Redirect } from "react-router-dom";
 import useReactRouter from 'use-react-router';
-import Header2 from '../Header/header2';
-import Footer from '../../footer';
+
 import { NotificationManager, NotificationContainer } from 'react-notifications';
 
 
@@ -81,7 +80,7 @@ const Payment = (props) => {
     } else
     return (
         <Fragment>
-        <Header2 />
+        
         <div className="checkoutForm">
             
             
@@ -166,7 +165,7 @@ const Payment = (props) => {
             
 
         </div>
-<Footer />
+
 </Fragment>
     );
 

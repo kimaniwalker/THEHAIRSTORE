@@ -1,12 +1,12 @@
 import React, { Component, Fragment } from 'react';
-import '../utils/scss/pages/_banner2.scss';
-import HomeBanner from './screens/Home/homeBanner';
-import Packages from './screens/Packages/packages';
-import AboutMe from './aboutMe';
-import Banner2 from './banner2';
-import Contact from './contact2';
-import Footer from './footer';
-import Header from './screens/Header/header';
+import '../utils/scss/pages/_welcome.scss';
+import Header from './header';
+import { Link } from 'react-router-dom';
+import data from '../components/store/data.json'
+import ProductListing from './store/product-Listing';
+
+
+
 
 class Welcome extends Component {
   constructor(props) {
@@ -20,22 +20,30 @@ class Welcome extends Component {
   render() {
     return (
       <Fragment>
-        <main className="">
-        <Header />
-        <HomeBanner />
-        <Packages />
-        <AboutMe />
-        <Banner2 />
-        <Contact />
-        <Footer />
+        <main className="welcome">
+          <div>
+            <Header />
+            <Link to="/cart">
+              <button>
+                Cart
+              </button>
+            </Link>
+            <div className="container-fluid">
+              <ProductListing products={data.products}/>
 
+
+
+
+
+            </div>
+            </div>
         </main>
       </Fragment>
 
-    )
-  }
-
-
-}
-
+        )
+      }
+    
+    
+    }
+    
 export default Welcome;

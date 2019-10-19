@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import '../../src/utils/scss/pages/_admin.scss'
-import Footer from './footer';
-import Tickets from '../components/screens/Tickets/tickets';
+
 
 
 const BlogAdmin = () => {
@@ -63,13 +62,13 @@ const BlogAdmin = () => {
                     <div className="row mt-2">
                         <div className="col-md-12">
                             <h1 className="text-center mb-2">Tickets</h1>
-                            <Tickets />
+                            
 
                         </div>
                     </div>
                 </div>
             </div>
-          <Footer />  
+          
         </div>
         
     )

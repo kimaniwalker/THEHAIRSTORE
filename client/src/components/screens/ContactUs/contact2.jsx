@@ -5,8 +5,7 @@ import useReactRouter from 'use-react-router';
 import { NotificationManager, NotificationContainer } from 'react-notifications';
 
 import '../../../utils/scss/pages/_contact';
-import Header2 from '../Header/header2';
-import Footer from '../../footer';
+
 
 
 const { from } =  { from: { pathname: "/" } };
@@ -51,7 +50,7 @@ const Contact2 = (props) => {
     } else
     return (
         <Fragment>
-            <Header2 />
+            
         <main className="contact">
             <NotificationContainer />
             <div className="container-fluid">
@@ -86,7 +85,7 @@ const Contact2 = (props) => {
                 </div>
             </div>
         </main>
-        <Footer />
+        
         
         </Fragment>
 
