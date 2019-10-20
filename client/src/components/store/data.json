@@ -3,13 +3,15 @@
     {
       "id": 1,
       "name": "Kiddo Lowkiddo",
-      "description": "testing"
+      "description": "testing",
+      "price" : 30
 
     },
     {
       "id": 2,
       "name": "Kiddo Lowkiddo",
-      "description": "testing"
+      "description": "testing",
+      "price" : 45
 
     }
   ]

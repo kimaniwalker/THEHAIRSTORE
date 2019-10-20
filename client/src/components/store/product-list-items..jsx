@@ -9,9 +9,14 @@ export default function ProductListItem(props) {
         {props.product.id}
         {props.product.description}
         {props.product.name}
+        {props.product.price}
         <AddButton 
         addToCart={props.addToCart}
         cartItem={props.cartItem} product={props.product} />
+
+        <div>
+            <h2>Total: {props.product.price *  (props.cartItem && props.cartItem.quantity) ||0}</h2>
+        </div>
 
 {
     props.cartItem
