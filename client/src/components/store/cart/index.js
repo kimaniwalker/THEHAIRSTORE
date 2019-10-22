@@ -39,6 +39,10 @@ sort(props.cart).map(item => <tr key={item.id}>
     </td>
 </tr>)
             }
+
+            <button onClick={()=> props.cartTotal()}>
+                testing
+            </button>
         </tbody>
     </table>
 }
@@ -59,7 +63,12 @@ function mapDispatchToProps(dispatch) {
         }),
         removeAllFromCart: (item => {
             dispatch ({ type: 'REMOVE_ALL', payload: item})
-        })
+        }),
+
+        cartTotal: (item => {
+            dispatch ({ type: 'CART_TOTAL', payload: item})
+        }),
+        
     }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(Cart)
