@@ -10,6 +10,7 @@ import { isLoggedIn, tokenMiddleware } from '../middleware/auth.mw';
 import StripeRegisterRouter from './stripeRegisterPost';
 import StripeChargesPostRouter from './stripeChargePost';
 import WorkRequestRouter from './workrequest';
+import ProductsRouter from './products';
 
 
 
@@ -32,6 +33,7 @@ router.use('/profile', profileRouter);
 router.use('/striperegisterpost', StripeRegisterRouter);
 router.use('/stripecharges', StripeChargesPostRouter);
 router.use('/workrequest', WorkRequestRouter);
+router.use('/products', ProductsRouter);
 
 router.route('*')
 .post(tokenMiddleware, isLoggedIn)

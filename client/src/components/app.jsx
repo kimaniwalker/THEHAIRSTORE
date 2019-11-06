@@ -10,7 +10,13 @@ import Donate from './donate';
 import RegisterScreen from './register2';
 import Welcome from './welcome';
 import StripeRegister from './striperegister';
-import Cart from './store/cart';
+import CartPage from './store/cart';
+import DetailProduct from './store/detailProduct';
+
+
+
+
+
 
 
 
@@ -27,8 +33,10 @@ class Navigation extends Component {
                 <Fragment>
                     <Switch>
                         <Route exact path="/" component={Welcome} />
-                        <Route exact path="/cart" component={Cart}/>
+                        <Route path="/products/:id" component={DetailProduct} />
+                        <Route exact path="/cart" component={CartPage}/>
                         <Route path="/register" component={RegisterScreen} />
+                        
                         <PrivateRoute path="/admin" component={BlogAdmin} />
                         
                         <Route path="/login" component={Login} />

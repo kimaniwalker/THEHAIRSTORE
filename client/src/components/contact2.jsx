@@ -58,9 +58,7 @@ const Contact = (props) => {
                 <div className="row justify-content-center pt-3 pb-1">
                     <h1 className="text-light">Contact Us</h1>
                 </div>
-                <div className="row justify-content-center">
-                    <h2 className="text-light">Reach Out To Us For A Free Proposal</h2>
-                </div>
+                
                 <div className="row justify-content-center pb-3">
 
 

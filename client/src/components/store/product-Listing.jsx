@@ -1,19 +1,58 @@
-import React from 'react'
+import React, {useState,useEffect} from 'react'
 import ProductListItem from './product-list-items.'
 import { connect } from 'react-redux';
 
 
-function ProductListing(props) {
+
+
+const ProductListing = (props) => {
+    const [store,setStore] = useState([]);
+    
+    useEffect(() => {
+        fetchStore();
+
+    }, []);
+
+    const fetchStore = async() => {
+        try {
+            let res = await fetch('/api/products/');
+            let data = await res.json();
+            console.log(data);
+            setStore(data);
+        } catch (e) {
+            console.log(e);
+        }
+    }
+    
+    
+    
     return <div>
+        <div className="container-fluid">
+            <div className="row">
+            <div className="col-auto d-flex flex-wrap">
+
+            
+            
+
+        
         {
-            props.products.map( product => 
+            store.map( product => 
                 <ProductListItem product={product}
                  key={product.id}
                  addToCart={props.addToCart} 
                  removeFromCart={props.removeFromCart}
                  cartItem={props.cart.filter(cartItem => cartItem.id === product.id)[0]}
-                 />)
+                 
+                 />
+                 
+                 )
         }
+    </div>
+    </div>
+    
+    </div>
+
+    
     </div>
 }
 

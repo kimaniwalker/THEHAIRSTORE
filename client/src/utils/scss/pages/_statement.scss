@@ -1,0 +1,17 @@
+@import "../variables";
+@import "../typography";
+@import "../buttons";
+
+
+
+
+.statement {
+    height: 200px;
+    background-color: $primary;
+
+    .statementrow {
+        height: 200px;
+    }
+
+
+}

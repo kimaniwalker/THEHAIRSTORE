@@ -4,6 +4,10 @@ import Header from './header';
 import { Link } from 'react-router-dom';
 import data from '../components/store/data.json'
 import ProductListing from './store/product-Listing';
+import HomeBanner from './homeBanner';
+import Statement from './statement';
+import Footer from './footer';
+import Contact2 from './screens/ContactUs/contact2';
 
 
 
@@ -20,30 +24,37 @@ class Welcome extends Component {
   render() {
     return (
       <Fragment>
-        <main className="welcome">
+        <div className="welcome">
+          <Header />
+          <HomeBanner />
           <div>
-            <Header />
-            <Link to="/cart">
-              <button>
-                Cart
-              </button>
-            </Link>
-            <div className="container-fluid">
-              <ProductListing products={data.products}/>
+          </div>
+        </div>
+        <div>
 
+          <div className="container products-container">
+            <ProductListing products={data.products} />
 
+          </div>
 
+          <div>
+            <Statement />
+          </div>
 
+          <Contact2 />
 
-            </div>
-            </div>
-        </main>
+          <div>
+            <Footer />
+          </div>
+            
+          
+        </div>
       </Fragment>
 
-        )
-      }
-    
-    
-    }
-    
+    )
+  }
+
+
+}
+
 export default Welcome;

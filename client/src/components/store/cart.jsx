@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 
 const CartPage = (props) => {
 
-    const cartTotals = props.cart.reduce((cartTotals, currentTotals) => cartTotals + (currentTotals.price * currentTotals.quantity) , 0)
+    const cartTotals = props.cart.reduce((cartTotals, currentTotals) => cartTotals + (currentTotals.itemPrice * currentTotals.quantity) , 0)
     
     
     return(

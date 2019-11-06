@@ -15,7 +15,7 @@ function Cart(props) {
 
 
     return sort(props.cart).map(item => <div key={item.id}>
-        {item.name}
+        {item.itemName}
         {item.quantity}
         
         
