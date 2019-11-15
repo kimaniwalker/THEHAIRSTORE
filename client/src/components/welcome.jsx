@@ -37,15 +37,13 @@ class Welcome extends Component {
 
           </div>
 
-          <div>
-            <Statement />
-          </div>
+          
 
           <Contact2 />
 
-          <div>
+          {/* <div>
             <Footer />
-          </div>
+          </div> */}
             
           
         </div>

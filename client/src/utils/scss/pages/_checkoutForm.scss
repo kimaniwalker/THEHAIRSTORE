@@ -8,15 +8,14 @@
 
 .checkoutForm {
 
-    background-image: url("../../../../images/icons/6eb3fa65-76b0-42ba-82a8-0e0a418e1556.jpg");
+    background-image: url("../../../../images/home/roseBG.jpg");
     background-size: cover;
 
     #StripeElement {
-        background: lightgray;
+        background: $light;
         color: white;
-        padding: 5px;
         border-radius: 20px;
-        border:2px solid #1976D2;
+        border:2px solid $secondary;
     
     }
 
@@ -28,19 +27,26 @@
 
     .input-group {
         border: 0;
-        border-bottom: 2px solid #1976D2;
+        border-bottom: 2px solid $secondary;
         width: 100%;
         font-size: 3vw;
         line-height: 35px;
         height: 50px;
         text-align: center;
         padding: 10px;
-        background: transparent;
-        color: #BBDEFB;
+        border-radius: 20px;
+        color: $dark;
         font-family: 'Heebo', sans-serif;
         font-weight: 100;
         
     }
+
+    ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: $dark;
+        opacity: 1; /* Firefox */
+        
+    
+      }
 
     .btn {
         width: 100%;
@@ -48,9 +54,7 @@
     }
 
     #FormBg {
-        border: 1;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        border-radius: 20px;
+        
         
         
         
@@ -59,10 +63,9 @@
     @media only screen and (max-width : 768px) {
         
         #FormBg {
-            border: 1;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            border-radius: 20px;
-            width: 75%;
+
+            
+            width: 90%;
             display: block;
             
             

@@ -1,0 +1,20 @@
+
+@import "../variables";
+@import "../typography";
+@import "../buttons";
+
+.cart {
+
+    .striped-border {
+        border: .5px dashed #000;
+        width: 100%;
+        margin: auto;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+
+    i {
+        cursor: pointer
+    }
+
+}

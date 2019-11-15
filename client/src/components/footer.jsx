@@ -7,7 +7,7 @@ const Footer = () => {
         <main className="Footer">
             <div className="container-fluid">
                 <div className="row justify-content-center">
-                    <h2 className="text-light">Rose Beauty Boutique</h2>
+                    <h5 className="text-light">Site Developed By KEY2DESIGN</h5>
                 </div>
                 
                 

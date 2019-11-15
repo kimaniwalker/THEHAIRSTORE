@@ -1,7 +1,8 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import AddButton from './cart/addToCartBtn'
 import RemoveButton from './cart/removeFromCartBtn'
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import '../../utils/scss/pages/_products';
 
 
 const ProductListItem = (props) => {
@@ -9,53 +10,65 @@ const ProductListItem = (props) => {
 
     const SeeDetails = () => {
         console.log('testing')
-        
+
 
     }
-    
-    return <main>
+
+    return <main className="products pt-4">
         <div className="container-fluid">
             <div className="row">
                 <div className="col-auto">
-                    
+
                     <div className="card">
+
+
                         <div className="py-3 text-center">
                             <h2> {props.product.itemName}</h2>
                         </div>
                         <div className="card-body">
 
+                            <div className="row justify-content-center">
+                                <Link to={`/products/${props.product.id}`}><img className="grow" height="150px" src={props.product.itemImage}></img></Link>
 
-                             <img height="150px" src={props.product.itemImage}></img>
-                            
+                            </div>
 
-                            <div className="py-3">
-                                <h2>Price: {props.product.itemPrice}</h2>
-                                <AddButton
+
+
+                            <div className="row justify-content-center">
+                                <div className="py-3">
+                                    <h3>Price: {props.product.itemPrice}</h3>
+                                </div>
+                            </div>
+
+
+                            <AddButton
                                 addToCart={props.addToCart}
                                 cartItem={props.cartItem} product={props.product} />
-                            </div>
 
                             {
                                 props.cartItem
                                     ?
-                                    <RemoveButton
-                                        cartItem={props.cartItem}
-                                        product={props.product}
-                                        addToCart={props.addToCart}
-                                        removeFromCart={props.removeFromCart}
-                                    />
+                                    <div className="row justify-content-center">
+                                        <RemoveButton
+                                            cartItem={props.cartItem}
+                                            product={props.product}
+                                            addToCart={props.addToCart}
+                                            removeFromCart={props.removeFromCart}
+                                        />
+                                    </div>
+
                                     :
                                     null
                             }
 
 
                         </div>
-                        <div>
-                            <Link to={`/products/${props.product.id}`}><button className="btn button" onClick={()=>SeeDetails()}> Details</button></Link>
-                            
-                        </div>
-                        
-                        
+
+
+
+
+
+
                     </div>
 
                 </div>

@@ -1,14 +1,14 @@
 import React, { Fragment } from 'react'
 import '../utils/scss/pages/_statement.scss';
 
-const Statement = () => {
+const Statement = (props) => {
 
 
     return (
         <Fragment>
-            <div className="statement container-fluid py-2 my-4">
+            <div className="statement container-fluid py-2 mb-4">
                 <div className="row statementrow d-flex align-items-center justify-content-center">
-                    <h3 className="">Mission Statement Goes Here</h3>
+                    <h1 className="">{props.statement}</h1>
                     
                 </div>
             </div>

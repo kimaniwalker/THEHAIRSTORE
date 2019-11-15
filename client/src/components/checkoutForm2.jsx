@@ -26,6 +26,7 @@ const CheckoutForm = (props) => {
 
     const handlecustomerName = (e) => {
         setcustomerName(e.target.value);
+        setamount(props.amount);
     }
 
     const handleamount = (e) => {
@@ -34,25 +35,38 @@ const CheckoutForm = (props) => {
 
     const handlesubmitted = (e) => {
         setsubmitted(false);
+        setamount(props.amount);
     }
+
+   
 
     const handleEmail = (e) => {
         setEmail(e.target.value);
+        setamount(props.amount);
     }
 
     const handlePhone = (e) => {
         setPhone(e.target.value);
+        setamount(props.amount);
     }
 
     const handleDescription = (e) => {
         setDescription(e.target.value);
     }
 
+    const handleConfirmTotal = () =>  {
+        setamount(props.amount);
+        console.log('here');
+    }
+
+
     const handleSubmit = async (e) => {
         e.preventDefault();
+        
         try {
+            
             setsubmitted(true);
-            let token = await props.stripe.createToken({ name: customerName });
+            const token = await props.stripe.createToken({ name: customerName });
             await postCharge({ id: token.token.id, amount, description, phone, email });
             
             console.log(token.token.id);
@@ -81,7 +95,7 @@ const CheckoutForm = (props) => {
             <div className="container-fluid">
             <NotificationContainer />
                 <div className="row pt-3 pb-3 justify-content-center">
-                    <div id="FormBg" className="col-lg-5 col-md-6 col-sm-7 bg-dark pt-4">
+                    <div id="FormBg" className="col-xl-7 col-lg-8 col-md-10 col-sm-12 pt-4">
                         <div className="row justify-content-center text-light pb-2">
                             <h2>Make A Payment</h2>
                         </div>
@@ -115,25 +129,6 @@ const CheckoutForm = (props) => {
                                     placeholder="Phone"
                                 />
                             </div>
-
-                            <div className="row mb-4 ml-3 mr-3">
-                                <input 
-                                className="input-group"
-                                onChange={handleDescription}
-                                value={description}
-                                placeholder="Description">
-                                </input>
-                            </div>
-
-
-
-                            <div className="row mb-4 ml-3 mr-3n pb-4">
-                                <input className="input-group"
-                                    value={amount}
-                                    onChange={handleamount}
-                                    placeholder="Amount Ex. 40.00" />
-                            </div>
-
 
                             <CardSection />
 
