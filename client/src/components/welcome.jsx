@@ -8,6 +8,9 @@ import HomeBanner from './homeBanner';
 import Statement from './statement';
 import Footer from './footer';
 import Contact2 from './screens/ContactUs/contact2';
+import ProductStore from './store/storeFront';
+import Quote from './quote';
+
 
 
 
@@ -32,18 +35,28 @@ class Welcome extends Component {
         </div>
         <div>
 
+
+        <div className="container products-container">
+            <ProductStore />
+
+          </div>
+
+          <Quote />
+
           <div className="container products-container">
             <ProductListing products={data.products} />
 
           </div>
 
           
+          
+          
 
           <Contact2 />
 
-          {/* <div>
+          <div>
             <Footer />
-          </div> */}
+          </div>
             
           
         </div>

@@ -19,11 +19,13 @@ async function postCharge(token, amount, description, phone, email) {
 
         if (contentType.indexOf('application/json') > -1) {
             
+            console.log(response);
             return response.json();
 
         }
-       
-        return response.statusText;
+        
+        console.log(response.status);
+        return response.status;
 
 
     }

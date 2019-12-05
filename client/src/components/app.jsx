@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import UserDetailScreen from './screens/Profile';
+import PortfolioScreen from './screens/Portfolio/portfolio';
 import PrivateRoute from './auth/privateRoute';
 import Login from './auth/login2';
 import Logout from './auth/logout';
@@ -36,6 +37,8 @@ class Navigation extends Component {
                         <Route path="/products/:id" component={DetailProduct} />
                         <Route exact path="/cart" component={CartPage}/>
                         <Route path="/register" component={RegisterScreen} />
+                        <Route path="/portfolio" component={PortfolioScreen} />
+
                         
                         <PrivateRoute path="/admin" component={BlogAdmin} />
                         

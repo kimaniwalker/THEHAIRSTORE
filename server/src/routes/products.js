@@ -28,6 +28,19 @@ try {
 
 });
 
+router.get('/bodywavefrontal' , async(req, res, next) =>{
+    
+    try {
+        let results = await db.allBodyWave();
+        res.json(results);
+    
+    } catch(err) {
+        console.log(err);
+        res.sendStatus(500);
+    }
+    
+    });
+
 router.get('/:id' , async(req, res, next) =>{
     
     try {

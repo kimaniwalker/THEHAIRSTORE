@@ -74,7 +74,7 @@ const Contact = (props) => {
                             <div className="form-group pt-2 pb-2">
                                 <textarea placeholder="Enter Message Here" value={message} onChange={handleMessage} cols="30" rows="10" className="form-control bg-transparent text-light"></textarea>
                             </div>
-                            <input type="submit" className="btn pb-2 bg-dark text-light" />
+                            <input type="submit" className="btn2 pb-2 bg-dark text-light" />
                         </form>
 
                     </div>

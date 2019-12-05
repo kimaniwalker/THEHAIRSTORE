@@ -1,14 +1,13 @@
 @import "../variables";
-@import url('https://fonts.googleapis.com/css?family=Heebo&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Heebo:300&display=swap');
+@import "../typography";
 
 
 
 .Footer {
     padding-top: 20px;
     padding-bottom: 20px;
-    height: 50px;
-    background-color: $dark;
+    height: 150px;
+    background-color: lightgray;
     
 
 
@@ -22,11 +21,7 @@
     }
     
 
-    p {
-        font-size: 10px;
-        font-family: 'Heebo', sans-serif;
-        color: $secondary
-    }
+    
 
 
 

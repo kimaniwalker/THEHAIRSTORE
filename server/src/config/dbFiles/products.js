@@ -23,6 +23,23 @@ products.all = () => {
 
 };
 
+products.allBodyWave = () => {
+
+    return new Promise((resolve, reject) => {
+
+        pool.query(`SELECT * FROM products WHERE itemCategory = 'Body Wave Frontal'`, (err, results) =>{
+
+            if(err) {
+                return reject(err);
+            }
+
+            return resolve(results);
+        })
+
+    })
+
+};
+
 
 products.one = (id) => {
 

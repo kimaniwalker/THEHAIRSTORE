@@ -7,7 +7,11 @@ const Footer = () => {
         <main className="Footer">
             <div className="container-fluid">
                 <div className="row justify-content-center">
-                    <h5 className="text-light">Site Developed By KEY2DESIGN</h5>
+                    <h3 className="text-primary">Site Developed By Key2Design</h3>
+                </div>
+
+                <div className="row justify-content-center pt-3">
+                    <img src="../../images/footer/logo.png" width="120px"></img>
                 </div>
                 
                 

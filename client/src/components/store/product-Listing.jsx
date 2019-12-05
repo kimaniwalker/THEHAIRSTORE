@@ -15,7 +15,7 @@ const ProductListing = (props) => {
 
     const fetchStore = async() => {
         try {
-            let res = await fetch('/api/products/');
+            let res = await fetch('/api/products');
             let data = await res.json();
             console.log(data);
             setStore(data);
@@ -27,7 +27,7 @@ const ProductListing = (props) => {
     
     
     return <div>
-        <div className="container-fluid">
+        <div className="container-fluid pb-4">
             <div className="row">
             <div className="col-auto d-flex flex-wrap">
 

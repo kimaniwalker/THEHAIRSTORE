@@ -31,7 +31,7 @@ router.post('/', async (req, res) => {
 
   try {
     let chargeResponse = await charge(tokenId, amount, description, phone, email);
-    res.sendStatus(200);
+    res.send(chargeResponse);
     logger.info(res.statusCode + ' Response from Stripe ');
     console.log(chargeResponse);
     console.log(chargeResponse.id);
@@ -52,11 +52,11 @@ router.post('/', async (req, res) => {
     console.log(object);
     console.log('here');
 
-    /* await fetch('http://www.key2design.io/api/stripecharges', {
+    await fetch('http://www.localhost:3000/api/stripecharges', {
       method: "POST",
       body: JSON.stringify(object),
       headers: new Headers({ "Content-Type": "application/json" })
-    }); */
+    });
 
 
   } catch (err) {
