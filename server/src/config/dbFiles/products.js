@@ -23,11 +23,30 @@ products.all = () => {
 
 };
 
-products.allBodyWave = () => {
+products.allBwHair = () => {
 
     return new Promise((resolve, reject) => {
 
-        pool.query(`SELECT * FROM products WHERE itemCategory = 'Body Wave Frontal'`, (err, results) =>{
+        pool.query(`SELECT * FROM products WHERE itemCategory = 'Body Wave'`, (err, results) =>{
+
+            if(err) {
+                return reject(err);
+            }
+
+            return resolve(results);
+        })
+
+    })
+
+};
+
+
+
+products.allStraight = () => {
+
+    return new Promise((resolve, reject) => {
+
+        pool.query(`SELECT * FROM products WHERE itemCategory = 'Brazilian'`, (err, results) =>{
 
             if(err) {
                 return reject(err);

@@ -102,12 +102,12 @@ const ProductStore = () => {
 
 
                             <div className="py-3 text-center">
-                                <h2>BODY WAVE FRONTAL</h2>
+                                <h2>Deep Wave</h2>
                             </div>
                             <div className="card-body">
 
                                 <div className="row justify-content-center">
-                                    <Link to={`/products/`}><img className="grow" height="150px" src="../../../images/home/BODYWAVEFRONTAL.jpg"></img></Link>
+                                    <Link to={`/products/`}><img className="grow" height="150px" src="../../../images/home/DEEPWAVE.PNG"></img></Link>
 
                                 </div>
 
@@ -149,12 +149,12 @@ const ProductStore = () => {
 
 
                             <div className="py-3 text-center">
-                                <h2>BODY WAVE CLOSURE</h2>
+                                <h2>Loose Wave</h2>
                             </div>
                             <div className="card-body">
 
                                 <div className="row justify-content-center">
-                                    <Link to={`/products/`}><img className="grow" height="150px" src="../../../images/home/CLOSURE.PNG"></img></Link>
+                                    <Link to={`/products/`}><img className="grow" height="150px" src="../../../images/home/LOOSEWAVE.PNG"></img></Link>
 
                                 </div>
 

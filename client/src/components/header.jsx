@@ -23,7 +23,7 @@ const Header = () => {
             <div id="header" className="head fixed-top" onScroll={()=>scrollFunction()}>
                 <nav className="navbar navbar-expand-md py-3 d-flex justify-content-between">
                     <Link to='/'>
-                        <img className="grow" src="../../../images/icons/icon.png"
+                        <img className="grow" src="../../../images/icons/ROSELOGO.png"
                             alt="store"
                             width="75px">
                         </img>

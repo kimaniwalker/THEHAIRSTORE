@@ -26,6 +26,7 @@ import DetailProduct from './store/detailProduct';
 
 
 
+
 class Navigation extends Component {
     render() {
         return (
@@ -34,13 +35,14 @@ class Navigation extends Component {
                 <Fragment>
                     <Switch>
                         <Route exact path="/" component={Welcome} />
+                        <PrivateRoute exact path="/admin" component={BlogAdmin} />
                         <Route path="/products/:id" component={DetailProduct} />
                         <Route exact path="/cart" component={CartPage}/>
                         <Route path="/register" component={RegisterScreen} />
                         <Route path="/portfolio" component={PortfolioScreen} />
 
                         
-                        <PrivateRoute path="/admin" component={BlogAdmin} />
+                        <Route path="/store" component={BlogAdmin} />
                         
                         <Route path="/login" component={Login} />
                         <Route path="/logout" component={Logout} />

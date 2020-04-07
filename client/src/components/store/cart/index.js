@@ -5,25 +5,7 @@ import '../../../utils/scss/pages/_cart'
 
 const Cart = (props) => {
 
-    const [wig,setWig] = useState(props.wig);
-
-    const addWig = () => {
-        console.log('here MF');
-        var checkbox = document.getElementById('myCheck');
-       
-        if (checkbox.checked == true) {
-            console.log('checked')
-            setWig(true);
-            console.log(wig);
-        } else {
-            console.log("not checked")
-            setWig(false);
-            console.log(wig);
-        }
-
-
-
-    }
+    
 
     const sort = (items) => {
         return items.sort((a, b) => a.id < b.id)

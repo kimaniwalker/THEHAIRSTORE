@@ -6,6 +6,7 @@ import CardSection from './cardSection';
 import { Route } from "react-router-dom";
 import useReactRouter from 'use-react-router';
 import { NotificationManager, NotificationContainer } from 'react-notifications';
+import IndeterminateProgress from './utilities/indeterminateProgress';
 
 
 const CheckoutForm = (props) => {
@@ -16,10 +17,16 @@ const CheckoutForm = (props) => {
     const [submitted, setsubmitted] = useState(false);
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('');
-    const [description, setDescription] = useState('');
+    const [description, setDescription] = useState(`Special Message: ${props.message}
+    Closure: ${props.closure} Frontal: ${props.frontal} Coloring: ${props.coloring}` );
     const [paymentPosted, setPaymentPosted] = useState(false);
     const [data, setData] = useState([]);
+    const [specialMessage, setspecialMessage] = useState(props.message);
+    const [closure,setClosure] = useState(props.closure);
+    const [frontal,setFrontal] = useState(props.frontal);
+    const [coloring,setColoring] = useState(props.coloring);
     
+                     
     const { history, location, match } = useReactRouter();
 
     const { from } =  { from: { pathname: "/" } };
@@ -29,7 +36,8 @@ const CheckoutForm = (props) => {
 
     const handlecustomerName = (e) => {
         setcustomerName(e.target.value);
-        setamount(props.amount);
+        
+        
     }
 
     const handleamount = (e) => {
@@ -38,19 +46,19 @@ const CheckoutForm = (props) => {
 
     const handlesubmitted = (e) => {
         setsubmitted(false);
-        setamount(props.amount);
+        
     }
 
    
 
     const handleEmail = (e) => {
         setEmail(e.target.value);
-        setamount(props.amount);
+        
     }
 
     const handlePhone = (e) => {
         setPhone(e.target.value);
-        setamount(props.amount);
+       
     }
 
     const handleDescription = (e) => {
@@ -59,8 +67,10 @@ const CheckoutForm = (props) => {
 
     const handleConfirmTotal = () =>  {
         setamount(props.amount);
-        console.log(amount);
-        console.log('here');
+        setDescription(`Special Message: ${props.message}
+        Wig: ${props.wig}
+        Closure: ${props.closure} Frontal: ${props.frontal} Coloring: ${props.coloring}`)
+        
         
     }
 
@@ -80,10 +90,14 @@ const CheckoutForm = (props) => {
             
             NotificationManager.success('Payment Submitted Successfully');
             
+            
+            
+            
             setTimeout(() => {
                 if (response.status = 'succeeded'){
                 setData(response);
                 setPaymentPosted(true);
+               
                 console.log(data);
                 } else {
                     setPaymentPosted(false);

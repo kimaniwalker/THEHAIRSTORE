@@ -14,7 +14,9 @@ const Donate = (props) => {
             apiKey="pk_test_5tdzast6E5DFrnFEcXHrRjRr001G2jS4Am">
             
                 <Elements>
-                    <InjectedCheckoutForm amount={props.amount} />
+                    <InjectedCheckoutForm amount={props.amount} 
+                    message={props.message} wig={props.wig}
+                     closure={props.closure} frontal={props.frontal} coloring={props.coloring} />
                 </Elements>
             </StripeProvider>
             

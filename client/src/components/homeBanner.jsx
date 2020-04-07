@@ -22,7 +22,7 @@ const HomeBanner = () => {
                     <ol class="carousel-indicators">
                         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                        
+
                     </ol>
 
                     <div class="carousel-inner">
@@ -32,7 +32,7 @@ const HomeBanner = () => {
                         <div class="carousel-item">
                             <img class="carousel-img" src="../../images/home/roseBG2.jpg" alt="Second slide"></img>
                         </div>
-                        
+
 
                         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -71,9 +71,9 @@ const HomeBanner = () => {
                                         <div className="py-4 row justify-content-center">
 
                                             <span className="py-2">
-                                                <button className="btn2 btn-success button  mx-1 ">Our Store</button>
-                                                <button className="btn2 btn-primary button  mx-1">Portfolio</button>
-                                                <button className="btn2 btn-danger button  mx-1">Our Story</button>
+                                                <a href="/store"><button className="btn2 btn-success button  mx-1 ">Our Store</button></a>
+                                                <a><button className="btn2 btn-primary button  mx-1">Portfolio</button></a>
+                                                <a><button className="btn2 btn-danger button  mx-1">Our Story</button></a>
 
                                             </span>
 

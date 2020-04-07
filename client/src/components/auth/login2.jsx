@@ -16,7 +16,7 @@ const Login = () => {
   const [checkingLogin, setcheckingLogin] = useState(true);
   const { history, location, match } = useReactRouter();
 
-  const { from } = location.state || { from: { pathname: "/" } };
+  const { from } = location.state || { from: { pathname: "/admin" } };
   useEffect(() => {
     userService.checkLogin().then(loggedIn => {
       if (loggedIn) {

@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react'
 import '../utils/scss/pages/_statement.scss';
+import Contact2 from './screens/ContactUs/contact2';
 
 const Quote = () => {
 
@@ -17,8 +18,18 @@ const Quote = () => {
                     </div> 
 
                     <div className="row justify-content-center py-2">
-                        <button className="btn2">Click Here</button>
+                        <button data-toggle="modal" data-target=".bd-example-modal-lg" className="btn2">Click Here</button>
                     </div> 
+
+                    <div className="modal fade bd-example-modal-lg" tabIndex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+
+                        <div className="modal-dialog modal-lg">
+                            <div className="modal-content">
+
+                               <Contact2 />
+                            </div>
+                        </div>
+                    </div>
 
                     </div>
                     
