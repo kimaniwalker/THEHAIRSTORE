@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { charge } from '../utils/stripeCharge'
+import { charge, retrieve, getCharges, getEvents, getWebHooks, createSession } from '../utils/stripeCharge'
 import stripeLoader from 'stripe';
 import { config } from '../config';
 require('isomorphic-fetch');
@@ -8,20 +8,21 @@ import logger from '../middleware/winston';
 
 
 
+
 let router = Router();
 
-router.use(function(req,res,next){
-  logger.debug('Sent From: ' + req.ip + 
-  'Request Type: ' + req.method +
-  'API URL: ' + req.baseUrl +
-  'Host Name: ' +
-  'Request Object: ' +  JSON.stringify(req.body));  
+router.use(function (req, res, next) {
+  logger.debug('Sent From: ' + req.ip +
+    'Request Type: ' + req.method +
+    'API URL: ' + req.baseUrl +
+    'Host Name: ' +
+    'Request Object: ' + JSON.stringify(req.body));
   next();
-  });
+});
 
 /* CREATE CHARGE */
 router.post('/', async (req, res) => {
-  
+
   let tokenId = req.body.token.id;
   let amount = req.body.token.amount;
   let description = req.body.token.description;
@@ -69,6 +70,26 @@ router.post('/', async (req, res) => {
 
 });
 
+router.post('/session', async (req, res) => {
+
+
+  let name = req.body.name
+  let description = req.body.description
+  let amount = req.body.amount
+  let quantity = req.body.quantity
+  let success_url = req.body.success_url
+  let cancel_url = req.body.cancel_url
+
+
+  try {
+    let sessionResponse = await createSession(name, description, amount, 
+      quantity, success_url, cancel_url);
+    res.send(sessionResponse);
+  } catch (e) {
+    console.log(e)
+  }
+})
+
 /* STRIPE CONNECT USER POST */
 router.post('/striperegister', async (req, res) => {
   console.log('on the backend yo');
@@ -94,26 +115,8 @@ router.post('/striperegister', async (req, res) => {
 
 });
 
-/* RETRIEVE STRIPE BALANCE */
-function retrieve(err, balance) {
-  // returning a promise, so when we call .retrieveBalance elsewhere, we will use await
-  return stripe.balance
-    .retrieve({
-      api_key: config.STRIPE_SK,
-    })
-    .then((balance) => {
-      // The balance object for the connected account
-      let balanceObject = balance;
-      console.log('here', balanceObject);
-      return balance;
-    })
-    .catch((err) => {
-      // Error
-      console.log(err);
-    });
-};
 
-router.get('/', async (req, res) => {
+router.get('/balance', async (req, res) => {
   try {
     let balance = await retrieve();
     res.json({ balance });
@@ -122,6 +125,37 @@ router.get('/', async (req, res) => {
     res.sendStatus(500);
   }
 });
+
+router.get('/charges', async (req, res) => {
+  try {
+    let charges = await getCharges();
+    res.json({ charges });
+  } catch (err) {
+    console.log(err);
+    res.sendStatus(500);
+  }
+});
+
+router.get('/events', async (req, res) => {
+  try {
+    let events = await getEvents();
+    res.json({ events });
+  } catch (err) {
+    console.log(err);
+    res.sendStatus(500);
+  }
+});
+
+router.get('/webhooks', async (req, res) => {
+  try {
+    let webhooks = await getWebHooks();
+    res.json({ webhooks });
+  } catch (err) {
+    console.log(err);
+    res.sendStatus(500);
+  }
+});
+
 
 
 
