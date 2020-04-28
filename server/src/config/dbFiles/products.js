@@ -23,6 +23,74 @@ products.all = () => {
 
 };
 
+products.allHairAccessories = () => {
+
+    return new Promise((resolve, reject) => {
+
+        pool.query(`SELECT * FROM products WHERE itemCategory = 'Hair Accessories'`, (err, results) =>{
+
+            if(err) {
+                return reject(err);
+            }
+
+            return resolve(results);
+        })
+
+    })
+
+};
+
+products.allBundles = () => {
+
+    return new Promise((resolve, reject) => {
+
+        pool.query(`SELECT * FROM products WHERE itemCategory = 'Bundle Deals'`, (err, results) =>{
+
+            if(err) {
+                return reject(err);
+            }
+
+            return resolve(results);
+        })
+
+    })
+
+};
+
+products.allLwHair = () => {
+
+    return new Promise((resolve, reject) => {
+
+        pool.query(`SELECT * FROM products WHERE itemCategory = 'Loose Wave'`, (err, results) =>{
+
+            if(err) {
+                return reject(err);
+            }
+
+            return resolve(results);
+        })
+
+    })
+
+};
+
+products.allDwHair = () => {
+
+    return new Promise((resolve, reject) => {
+
+        pool.query(`SELECT * FROM products WHERE itemCategory = 'Deep Wave'`, (err, results) =>{
+
+            if(err) {
+                return reject(err);
+            }
+
+            return resolve(results);
+        })
+
+    })
+
+};
+
 products.allBwHair = () => {
 
     return new Promise((resolve, reject) => {
@@ -40,8 +108,6 @@ products.allBwHair = () => {
 
 };
 
-
-
 products.allStraight = () => {
 
     return new Promise((resolve, reject) => {
@@ -58,6 +124,8 @@ products.allStraight = () => {
     })
 
 };
+
+
 
 
 products.one = (id) => {

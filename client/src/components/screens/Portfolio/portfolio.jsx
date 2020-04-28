@@ -8,8 +8,8 @@ return(
     <Fragment>
         
         <main className="portfolio">
-            <Statement statement="Portfolio"/>
-        <h2>Testing</h2>        
+        <h2>Portfolio</h2>  
+
         </main>
     
     

@@ -4,15 +4,61 @@
 
 
 .home {
-    /* background-image: url(../../../../images/home/roseBG2.jpg);
-    background-size: cover; */
+    background-image: url(../../../../images/home/ROSEBANNER1920.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
 
     height: 100vh;
     width: 100%;
+    
 
+    
+    @media only screen and (max-width : 900px) {
+        .home {
+
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
     .btnrow {
         height: 90vh;
     }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    .scrollBar {
+        position: absolute;
+        top: 70%;
+
+    }
+
+    @media only screen and (max-width : 900px) {
+    .scrollBar{
+
+       position: absolute;
+       display: none;
+
+    }
+    }
+
+    .grow { transition: all .2s ease-in-out;
+    }
+   .grow:hover { transform: scale(1.1); 
+   }
+
+
 
     .text {
         padding-top: 3rem;

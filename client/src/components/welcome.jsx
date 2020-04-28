@@ -10,6 +10,8 @@ import Footer from './footer';
 import Contact2 from './screens/ContactUs/contact2';
 import ProductStore from './store/storeFront';
 import Quote from './quote';
+import PortfolioScreen from './screens/Portfolio/portfolio';
+import FeaturedProducts from './store/featuredProducts';
 
 
 
@@ -37,16 +39,18 @@ class Welcome extends Component {
 
 
         <div className="container products-container">
-            <ProductStore />
+            <FeaturedProducts />
 
           </div>
 
           <Quote />
 
-          <div className="container products-container">
+          {/* <div className="container products-container">
             <ProductListing products={data.products} />
 
           </div>
+ */}
+
 
           
           

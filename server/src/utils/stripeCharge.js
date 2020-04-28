@@ -10,7 +10,8 @@ function charge(token, amt, description, phone, email) {
     currency: 'usd',
     source: token,
     description: description,
-    metadata: { description: description, phone: phone, email: email }
+    metadata: { description: description, phone: phone, email: email },
+    
 
 
   });

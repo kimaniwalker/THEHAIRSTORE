@@ -1,138 +1,25 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import '../../utils/scss/pages/_productStore';
 import { Link } from 'react-router-dom';
+import Header from '../header';
+import FeaturedProducts from './featuredProducts';
+import GetHair from './products/hair';
+import SalesPitch from '../salesPitch';
+
 
 const ProductStore = () => {
 
     return (
-        <main className="products pt-4">
-            <div className="container-fluid">
-                <div className="row justify-content-center flex-wrap">
-                    <div className="col-xl-3 col-lg-6 col-md-6 col-sm-6">
+        <Fragment>
+            <main className="products">
 
-                        <div className="card">
+                <div className="container-fluid">
 
-
-                            <div className="py-3 text-center">
-                                <h2>Straight</h2>
-                            </div>
-                            <div className="card-body">
-
-                                <div className="row justify-content-center">
-                                    <Link to={`/products/`}><img className="grow" height="150px" src="../../../images/home/STRAIGHT.jpg"></img></Link>
-
-                                </div>
+                    <div className="row">
 
 
 
-                                <div className="row justify-content-center">
-                                    <div className="py-3">
-                                        <h3>Price: $125 - $250</h3>
-                                    </div>
-                                </div>
-
-                                <div className="row justify-content-center">
-                                    <div className="py-3">
-                                        <button className="btn2">See More</button>
-                                    </div>
-                                </div>
-
-
-
-
-
-                            </div>
-
-
-
-
-
-
-                        </div>
-
-                    </div>
-
-                    <div className="col-xl-3 col-lg-6 col-md-6 col-sm-6">
-
-                        <div className="card">
-
-
-                            <div className="py-3 text-center">
-                                <h2>Body Wave</h2>
-                            </div>
-                            <div className="card-body">
-
-                                <div className="row justify-content-center">
-                                    <Link to={`/products/`}><img className="grow" height="150px" src="../../../images/home/BODYWAVE.jpg"></img></Link>
-
-                                </div>
-
-
-
-                                <div className="row justify-content-center">
-                                    <div className="py-3">
-                                        <h3>Price: $125 - $250</h3>
-                                    </div>
-                                </div>
-
-                                <div className="row justify-content-center">
-                                    <div className="py-3">
-                                        <button className="btn2">See More</button>
-                                    </div>
-                                </div>
-
-
-
-
-
-                            </div>
-
-
-
-
-
-
-                        </div>
-
-                    </div>
-
-                    <div className="col-xl-3 col-lg-6 col-md-6 col-sm-6">
-
-                        <div className="card">
-
-
-                            <div className="py-3 text-center">
-                                <h2>Deep Wave</h2>
-                            </div>
-                            <div className="card-body">
-
-                                <div className="row justify-content-center">
-                                    <Link to={`/products/`}><img className="grow" height="150px" src="../../../images/home/DEEPWAVE.PNG"></img></Link>
-
-                                </div>
-
-
-
-                                <div className="row justify-content-center">
-                                    <div className="py-3">
-                                        <h3>Price: $125 - $250</h3>
-                                    </div>
-                                </div>
-
-                                <div className="row justify-content-center">
-                                    <div className="py-3">
-                                        <button className="btn2">See More</button>
-                                    </div>
-                                </div>
-
-
-
-
-
-                            </div>
-
-
-
+                        <div className="bannerImg">
 
 
 
@@ -142,60 +29,33 @@ const ProductStore = () => {
 
 
 
+                    <div id="sideMenu" className="row">
 
-                    <div className="col-xl-3 col-lg-6 col-md-6 col-sm-6">
-
-                        <div className="card">
-
-
-                            <div className="py-3 text-center">
-                                <h2>Loose Wave</h2>
-                            </div>
-                            <div className="card-body">
-
-                                <div className="row justify-content-center">
-                                    <Link to={`/products/`}><img className="grow" height="150px" src="../../../images/home/LOOSEWAVE.PNG"></img></Link>
-
-                                </div>
-
-
-
-                                <div className="row justify-content-center">
-                                    <div className="py-3">
-                                        <h3>Price: $125 - $250</h3>
-                                    </div>
-                                </div>
-
-                                <div className="row justify-content-center">
-                                    <div className="py-3">
-                                        <button className="btn2">See More</button>
-                                    </div>
-                                </div>
-
-
-
-
-
-                            </div>
-
-
-
-
-
-
+                        <div className="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 bg-primary">
+                            <h2>Test</h2>
                         </div>
-
+                        <div className="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 bg-success">
+                            <h2>Test</h2>
+                        </div>
+                        <div className="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 bg-warning">
+                            <h2>Test</h2>
+                        </div>
                     </div>
 
-
+                    
+               <SalesPitch /> 
+               
 
                 </div>
-            </div>
 
+                
 
+            </main>
+            
+        
+            
 
-        </main>
-
+        </Fragment>
     )
 }
 

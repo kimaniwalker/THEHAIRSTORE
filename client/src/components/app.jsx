@@ -13,6 +13,9 @@ import Welcome from './welcome';
 import StripeRegister from './striperegister';
 import CartPage from './store/cart';
 import DetailProduct from './store/detailProduct';
+import FeaturedProducts from './store/featuredProducts';
+import StoreFront from './store/storeFront';
+import getHair from './store/products/hair';
 
 
 
@@ -42,7 +45,8 @@ class Navigation extends Component {
                         <Route path="/portfolio" component={PortfolioScreen} />
 
                         
-                        <Route path="/store" component={BlogAdmin} />
+                        <Route path="/store" component={StoreFront} />
+                        <Route path="/hair" component={getHair} />
                         
                         <Route path="/login" component={Login} />
                         <Route path="/logout" component={Logout} />

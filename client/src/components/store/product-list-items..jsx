@@ -23,7 +23,7 @@ const ProductListItem = (props) => {
 
 
                         <div className="py-3 text-center">
-                            <h2> {props.product.itemName}</h2>
+                            <h3> {props.product.itemName}</h3>
                         </div>
                         <div className="card-body">
 

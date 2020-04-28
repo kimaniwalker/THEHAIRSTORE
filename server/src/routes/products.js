@@ -28,6 +28,58 @@ router.get('/', async (req, res, next) => {
 
 });
 
+router.get('/hairaccessories', async (req, res, next) => {
+
+    try {
+        let results = await db.allHairAccessories();
+        res.json(results);
+
+    } catch (err) {
+        console.log(err);
+        res.sendStatus(500);
+    }
+
+});
+
+router.get('/bundledeals', async (req, res, next) => {
+
+    try {
+        let results = await db.allBundles();
+        res.json(results);
+
+    } catch (err) {
+        console.log(err);
+        res.sendStatus(500);
+    }
+
+});
+
+router.get('/deepwavehair', async (req, res, next) => {
+
+    try {
+        let results = await db.allDwHair();
+        res.json(results);
+
+    } catch (err) {
+        console.log(err);
+        res.sendStatus(500);
+    }
+
+});
+
+router.get('/loosewavehair', async (req, res, next) => {
+
+    try {
+        let results = await db.allLwHair();
+        res.json(results);
+
+    } catch (err) {
+        console.log(err);
+        res.sendStatus(500);
+    }
+
+});
+
 router.get('/bodywavehair', async (req, res, next) => {
 
     try {
@@ -115,6 +167,7 @@ router.put('/', async (req, res, next) => {
         logger.error(`${err.status || 500} - ${err.message} - ${req.originalUrl} - ${req.method} - ${req.ip} - `)
         res.status(500).send(err);
     }
+
 })
 
 
