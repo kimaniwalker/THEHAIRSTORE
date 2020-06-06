@@ -197,20 +197,37 @@ const GetHair = () => {
 
                             <ul className="list-unstyled components">
 
-                                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" className="dropdown-toggle">Lashes</a>
+                                <a href="#homeSubmenu" data-toggle="collapse"
+                                 aria-expanded="false" className="dropdown-toggle">Lashes</a>
                                 <ul className="collapse list-unstyled" id="homeSubmenu">
-                                
+
                                     <li className="active">
                                         <a onClick={() => handleStraight()} href="#">Mink Lashes</a>
                                     </li>
 
                                 </ul>
-                                
+
 
                             </ul>
 
 
-    
+                            <ul className="list-unstyled components">
+
+                                <a href="#homeSubmenu2" data-toggle="collapse2"
+                                 aria-expanded="false" className="dropdown-toggle">Lashes</a>
+                                <ul className="collapse2 list-unstyled" id="homeSubmenu2">
+
+                                    <li className="active">
+                                        <a onClick={() => handleStraight()} href="#">Mink Lashes</a>
+                                    </li>
+
+                                </ul>
+
+
+                            </ul>
+
+
+
                         </nav>
 
 

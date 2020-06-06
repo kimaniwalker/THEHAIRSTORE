@@ -42,22 +42,18 @@ class Welcome extends Component {
             <FeaturedProducts />
 
           </div>
-
-          <Quote />
+          
+          <div className="container products-container">
+            
+<h2>#ROSEBEAUTYBOUTIQUE</h2>
+          </div>
+          
 
           {/* <div className="container products-container">
             <ProductListing products={data.products} />
 
           </div>
  */}
-
-
-          
-          
-          
-
-          <Contact2 />
-
           <div>
             <Footer />
           </div>
