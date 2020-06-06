@@ -5,6 +5,9 @@ import Header from '../header';
 import FeaturedProducts from './featuredProducts';
 import GetHair from './products/hair';
 import SalesPitch from '../salesPitch';
+import Contact2 from '../screens/ContactUs/contact2';
+import Footer from '../footer';
+import VideoBanner from '../videoBanner';
 
 
 const ProductStore = () => {
@@ -44,7 +47,20 @@ const ProductStore = () => {
 
                     
                <SalesPitch /> 
+
+               <div>
+                   <div className="row">
+                       <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+<Contact2 />
+                       </div>
+                       <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+<VideoBanner />
+                       </div>
+
+                   </div>
+               </div>
                
+               <Footer />
 
                 </div>
 

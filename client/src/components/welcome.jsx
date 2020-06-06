@@ -12,6 +12,7 @@ import ProductStore from './store/storeFront';
 import Quote from './quote';
 import PortfolioScreen from './screens/Portfolio/portfolio';
 import FeaturedProducts from './store/featuredProducts';
+import VideoBanner from './videoBanner';
 
 
 
@@ -44,10 +45,8 @@ class Welcome extends Component {
 
 </div>
 
+<VideoBanner />
 
-<div id="videoBanner" className="container-fluid">
-  <h2>#ROSEBEAUTYBOUTIQUE</h2>
-</div>
 
 <Contact2 />
 
