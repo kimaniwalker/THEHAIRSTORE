@@ -34,32 +34,45 @@ class Welcome extends Component {
           <HomeBanner />
           <div>
           </div>
-        </div>
-        <div>
 
 
-        <div className="container products-container">
-            <FeaturedProducts />
-
-          </div>
-          
-          <div className="container products-container">
-            
-<h2>#ROSEBEAUTYBOUTIQUE</h2>
-          </div>
-          
-
-          {/* <div className="container products-container">
-            <ProductListing products={data.products} />
-
-          </div>
- */}
           <div>
-            <Footer />
-          </div>
-            
-          
+
+
+<div className="container products-container">
+  <FeaturedProducts />
+
+</div>
+
+
+<div id="videoBanner" className="container-fluid">
+  <h2>#ROSEBEAUTYBOUTIQUE</h2>
+</div>
+
+<Contact2 />
+
+
+{/* <div className="container products-container">
+  <ProductListing products={data.products} />
+
+</div>
+*/}
+<div>
+  <Footer />
+</div>
+
+
+</div>
+
+
+
+
+
+
+
         </div>
+
+        
       </Fragment>
 
     )

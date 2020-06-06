@@ -4,9 +4,21 @@
 
 
 .contact {
-    background-image: url(../../../../images/home/roseBG.jpg);
-    background-size: cover;
+    /* background-image: url(../../../../images/home/roseBG.jpg);
+    background-size: cover; */
     
+    input[type=text] , textarea {
+        width: 100%;
+        padding: 30px 20px;
+        margin: 12px 0;
+        box-sizing: border-box;
+        border: 1px solid transparent;
+        color: black;
+        font-family: 'Heebo', sans-serif;
+        font-weight: 100;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+
     h1{
         font-family: 'Heebo', sans-serif;
         font-weight: 100 ;
@@ -20,12 +32,16 @@
     }
 
     .form-group {
-        color: #BBDEFB;
         font-family: 'Heebo', sans-serif;
         font-weight: 100;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         
+        
+        
     }
+
+
+    
 
     .btn {
         width: 100%;
