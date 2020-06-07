@@ -165,7 +165,7 @@ const GetHair = () => {
                 <div className="">
 
                     <div id="content">
-                        <nav className="navbar navbar-expand-lg navbar-light fixed-top container-fluid navbarSpecial">
+                        <nav className="navbar navbar-expand-lg navbar-light container-fluid navbarSpecial">
 
                             <div className="container-fluid">
 

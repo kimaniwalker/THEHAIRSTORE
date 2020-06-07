@@ -83,19 +83,80 @@
     .bannerImg {
 
         width: 100%;
-        height: 25vh;
-        background-color: red;
-    background-size: 100%;
-    background-repeat: no-repeat;
+        height: 20vh;
+        background-color: white;
+    
+    }
+
+    .sideText {
+        padding-top: 150px;
+        color: white;
+        
     }
 
     #sideMenu {
-        height: 65vh;
+        width:100%;
         background-color: whitesmoke;
     }
 
+    #sideMenuLashes {
+        height: 400px;
+        background-color: whitesmoke;
+        background-image: url('../../../../images/home/blackModel.jpg');
+        background-size: cover;
     
 
+    
+    }
+
+    #sideMenuHair {
+        height: 400px;
+        background-color: whitesmoke;
+        background-image: url('../../../../images/home/blackModel3.jpg');
+        background-size: cover;
+
+    
+    }
+
+    #sideMenuCosmetics {
+        height: 400px;
+        background-color: whitesmoke;
+        background-image: url('../../../../images/home/blackModel2.jpg');
+        background-size: cover;
+
+    
+    }
+
+    .sideText:hover {
+        padding-top: 300px;
+        color: $dark
+        
+    }
+
+    #sideMenuLashes:hover {
+        height: 200px;
+        background-color: whitesmoke;
+        background-image: url('../../../../images/home/blackModel3.jpg');
+        background-size: cover;
+        background-repeat: repeat;
+    }
+
+    #sideMenuCosmetics:hover {
+        height: 200px;
+        background-color: whitesmoke;
+        background-image: url('../../../../images/home/blackModel.jpg');
+        background-size: cover;
+        background-repeat: repeat;
+    }
    
+    #sideMenuHair:hover {
+        height: 200px;
+        background-color: whitesmoke;
+        background-image: url('../../../../images/home/blackModel2.jpg');
+        background-size: cover;
+        background-repeat: repeat;
+    }
+
+    
 
 }
