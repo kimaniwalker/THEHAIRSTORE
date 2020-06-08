@@ -16,7 +16,9 @@
 
     @media only screen and (max-width : 900px) {
     .head {
-         display: none;
+         display: flex;
+         justify-content: center;
+         margin-bottom: 25px;
     }
     
     }

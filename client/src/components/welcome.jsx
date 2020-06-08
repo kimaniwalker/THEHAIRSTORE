@@ -13,6 +13,7 @@ import Quote from './quote';
 import PortfolioScreen from './screens/Portfolio/portfolio';
 import FeaturedProducts from './store/featuredProducts';
 import VideoBanner from './videoBanner';
+import AboutUsBanner from './aboutUsBanner';
 
 
 
@@ -48,8 +49,10 @@ class Welcome extends Component {
 <VideoBanner />
 
 
-<Contact2 />
 
+
+<Contact2 />
+<AboutUsBanner />
 
 {/* <div className="container products-container">
   <ProductListing products={data.products} />

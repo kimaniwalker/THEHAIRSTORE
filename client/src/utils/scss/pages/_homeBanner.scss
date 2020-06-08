@@ -10,18 +10,7 @@
 
     height: 100vh;
     width: 100%;
-    
 
-    
-    @media only screen and (max-width : 900px) {
-        .home {
-
-        }
-    }
-    
-    
-    
-    
     
     
     
@@ -82,4 +71,12 @@
     
     
 }
-
+@media only screen and (max-width : 900px) {
+    .home {
+    background-color: $primary;
+    background-image: none;
+    height: 25vh;
+    width: 100%;
+       
+    }
+}

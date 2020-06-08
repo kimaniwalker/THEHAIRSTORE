@@ -28,6 +28,32 @@ router.get('/', async (req, res, next) => {
 
 });
 
+router.get('/lashes', async (req, res, next) => {
+
+    try {
+        let results = await db.allLashes();
+        res.json(results);
+
+    } catch (err) {
+        console.log(err);
+        res.sendStatus(500);
+    }
+
+});
+
+router.get('/cosmetics', async (req, res, next) => {
+
+    try {
+        let results = await db.allCosmetics();
+        res.json(results);
+
+    } catch (err) {
+        console.log(err);
+        res.sendStatus(500);
+    }
+
+});
+
 router.get('/hairaccessories', async (req, res, next) => {
 
     try {

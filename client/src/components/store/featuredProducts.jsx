@@ -28,7 +28,7 @@ const FeaturedProducts = () => {
                             <div className="card-body">
 
                                 <div className="row justify-content-center">
-                                    <Link to={`/products/`}><img className="grow" height="150px" src="../../../images/home/lashes.png"></img></Link>
+                                    <Link to={`/store`}><img className="grow" height="150px" src="../../../images/home/lashes.png"></img></Link>
 
                                 </div>
 
@@ -42,7 +42,7 @@ const FeaturedProducts = () => {
 
                                 <div className="row justify-content-center">
                                     <div className="py-3">
-                                        <button className="btn2">See More</button>
+                                        <a href='/store'><button className="btn2">See More</button></a>
                                     </div>
                                 </div>
 
@@ -72,7 +72,7 @@ const FeaturedProducts = () => {
                             <div className="card-body">
 
                                 <div className="row justify-content-center">
-                                    <Link to={`/products/`}><img className="grow" height="150px" src="../../../images/home/BODYWAVE.jpg"></img></Link>
+                                    <Link to={`/store`}><img className="grow" height="150px" src="../../../images/home/BODYWAVE.jpg"></img></Link>
 
                                 </div>
 
@@ -86,7 +86,7 @@ const FeaturedProducts = () => {
 
                                 <div className="row justify-content-center">
                                     <div className="py-3">
-                                        <button className="btn2">See More</button>
+                                        <a href='/store'><button className="btn2">See More</button></a>
                                     </div>
                                 </div>
 
@@ -116,7 +116,7 @@ const FeaturedProducts = () => {
                             <div className="card-body">
 
                                 <div className="row justify-content-center">
-                                    <Link to={`/products/`}><img className="grow" height="150px" width="150px" src="../../../images/home/wigs.PNG"></img></Link>
+                                    <Link to={`/store`}><img className="grow" height="150px" width="150px" src="../../../images/home/wigs.PNG"></img></Link>
 
                                 </div>
 
@@ -130,7 +130,7 @@ const FeaturedProducts = () => {
 
                                 <div className="row justify-content-center">
                                     <div className="py-3">
-                                        <button className="btn2">See More</button>
+                                        <a href='/store'><button className="btn2">See More</button></a>
                                     </div>
                                 </div>
 
@@ -160,7 +160,7 @@ const FeaturedProducts = () => {
                             <div className="card-body">
 
                                 <div className="row justify-content-center">
-                                    <Link to={`/products/`}><img className="grow" height="150px" src="../../../images/home/soap.PNG"></img></Link>
+                                    <Link to={`/store`}><img className="grow" height="150px" src="../../../images/home/soap.PNG"></img></Link>
 
                                 </div>
 
@@ -174,7 +174,7 @@ const FeaturedProducts = () => {
 
                                 <div className="row justify-content-center">
                                     <div className="py-3">
-                                        <button className="btn2">See More</button>
+                                        <a href='/store'><button className="btn2">See More</button></a>
                                     </div>
                                 </div>
 

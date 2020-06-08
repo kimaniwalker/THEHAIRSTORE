@@ -8,8 +8,11 @@ import Contact2 from '../screens/ContactUs/contact2';
 import Footer from '../footer';
 import VideoBanner from '../videoBanner';
 import Header from '../header';
+import AboutUsBanner from '../aboutUsBanner';
 
 const ProductStore = () => {
+
+
 
     return (
         <Fragment>
@@ -22,40 +25,47 @@ const ProductStore = () => {
 
 
                         <div className="bannerImg">
-                    
-<Header />
+
+                            <Header />
 
                         </div>
 
                     </div>
 
-                    
-                        <div className="row">
 
-                            <div id="sideMenuHair" className="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 bg-primary">
-                                <div className="row justify-content-center sideText">
-                                  <h2>Hair</h2>  
-                                </div>
-                                
+                    <div className="row">
+
+                        <div id="sideMenuHair" className="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 bg-primary">
+                            <a href='/hair'><div className="row justify-content-center sideText">
+                                <h2>Hair</h2>
                             </div>
-                            <div id="sideMenuLashes" className="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 bg-success">
-                                <div className="row justify-content-center sideText">
-                                  <h2>Lashes</h2>  
-                                </div>
-                                
-                            </div>
-                            <div id="sideMenuCosmetics" className="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 bg-warning">
-                                <div className="row justify-content-center sideText">
-                                  <h2>Cosmetics</h2>  
-                                </div>
-                                
-                            </div>
+                            </a>
+
                         </div>
-                    
+                        <div id="sideMenuLashes" className="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 bg-success">
+                            <a href='/lashes'><div className="row justify-content-center sideText">
+                                <h2>Lashes</h2>
+                            </div>
+                            </a>
+
+                        </div>
+                        <div id="sideMenuCosmetics" className="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 bg-warning">
+                            <a href='/cosmetics'>
+                            <div className="row justify-content-center sideText">
+                                <h2>Cosmetics</h2>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+
 
 
                     <div className="container-fluid">
                         <SalesPitch />
+                    </div>
+
+                    <div className="row">
+                    <AboutUsBanner />
                     </div>
 
 

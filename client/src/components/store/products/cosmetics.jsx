@@ -11,7 +11,7 @@ import Footer from '../../footer';
 
 
 
-const GetHair = () => {
+const GetCosmetics = () => {
 
     const [account, setHandleAccount] = useState(false)
     const [user, setUser] = useState([])
@@ -106,7 +106,7 @@ const GetHair = () => {
 
                     <div id="comingSoon" className="container">
                         <div className="row justify-content-center">
-                            <h4>Stay Tuned We Are Lauching Our Hair Line Soon</h4>
+                            <h4>Stay Tuned We Are Lauching Our Cosmetics Line Soon</h4>
                         </div>
                     </div>
                     <Footer />
@@ -116,4 +116,4 @@ const GetHair = () => {
         </Fragment>
     )
 }
-export default GetHair;
+export default GetCosmetics;

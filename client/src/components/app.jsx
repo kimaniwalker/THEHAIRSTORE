@@ -16,6 +16,8 @@ import DetailProduct from './store/detailProduct';
 import FeaturedProducts from './store/featuredProducts';
 import StoreFront from './store/storeFront';
 import getHair from './store/products/hair';
+import GetLashes from './store/products/lashes';
+import GetCosmetics from './store/products/cosmetics';
 
 
 
@@ -47,6 +49,8 @@ class Navigation extends Component {
                         
                         <Route path="/store" component={StoreFront} />
                         <Route path="/hair" component={getHair} />
+                        <Route path="/lashes" component={GetLashes} />
+                        <Route path="/cosmetics" component={GetCosmetics} />
                         
                         <Route path="/login" component={Login} />
                         <Route path="/logout" component={Logout} />

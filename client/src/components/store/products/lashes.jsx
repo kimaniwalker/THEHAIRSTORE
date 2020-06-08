@@ -2,16 +2,14 @@ import React, { useState, useEffect, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import '../../../utils/scss/pages/_products.scss'
 import ProductStraight from '../product-straight';
-import ProductBw from '../product-bw';
-import ProductLooseWave from '../product-lw';
-import ProductDeepWave from '../product-dw';
-import ProductHairAccessories from '../product-hairaccessories';
+import ProductLashes from '../product-lashes';
 import Header from '../../header';
 import Footer from '../../footer';
 
 
 
-const GetHair = () => {
+
+const GetLashes = () => {
 
     const [account, setHandleAccount] = useState(false)
     const [user, setUser] = useState([])
@@ -104,9 +102,9 @@ const GetHair = () => {
                     </div>
 
 
-                    <div id="comingSoon" className="container">
-                        <div className="row justify-content-center">
-                            <h4>Stay Tuned We Are Lauching Our Hair Line Soon</h4>
+                    <div id="" className="container">
+                        <div className="row justify-content-ceneter">
+                            <ProductLashes />
                         </div>
                     </div>
                     <Footer />
@@ -116,4 +114,4 @@ const GetHair = () => {
         </Fragment>
     )
 }
-export default GetHair;
+export default GetLashes;

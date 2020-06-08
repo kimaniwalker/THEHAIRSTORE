@@ -125,6 +125,41 @@ products.allStraight = () => {
 
 };
 
+products.allLashes = () => {
+
+    return new Promise((resolve, reject) => {
+
+        pool.query(`SELECT * FROM products WHERE itemCategory = 'Lashes'`, (err, results) =>{
+
+            if(err) {
+                return reject(err);
+            }
+
+            return resolve(results);
+        })
+
+    })
+
+};
+products.allCosmetics = () => {
+
+    return new Promise((resolve, reject) => {
+
+        pool.query(`SELECT * FROM products WHERE itemCategory = 'Cosmetics'`, (err, results) =>{
+
+            if(err) {
+                return reject(err);
+            }
+
+            return resolve(results);
+        })
+
+    })
+
+};
+
+
+
 
 
 

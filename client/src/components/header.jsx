@@ -1,7 +1,7 @@
 import React, { Fragment , useState } from 'react';
 import '../utils/scss/pages/_header.scss';
 import { Link } from 'react-router-dom';
-import AuthButton from './auth/authButton';
+import AuthButton from './auth/authButton'; 
 
 const Header = () => {
 

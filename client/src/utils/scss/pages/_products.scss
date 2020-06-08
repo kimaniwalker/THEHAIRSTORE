@@ -9,6 +9,18 @@
         border-color:transparent;
     }
 
+    .bannerRow {
+        height: 20vh;
+        width: 100%;
+        background-color: $primary;
+    }
+
+    #comingSoon {
+        justify-content: center;
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
     .card-footer{
 
         background: transparent;
