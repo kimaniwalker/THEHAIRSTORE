@@ -37,7 +37,6 @@ const Header = () => {
     <Link to="/cart"><i className="fas fa-shopping-cart  grow p-2">
     </i></Link>
      <Link to="/store"><i className="fas fa-store  grow p-3"></i></Link>
-     <Link to="/cart"><i className="fas fa-bars  grow p-3"></i></Link>
      <Link to="/cart"><i className="fas fa-lock-open  grow p-3"></i></Link>
      <Link to="/cart"><i className="fab fa-facebook  grow p-3"></i></Link>
      <Link to="/cart"><i className="fab fa-instagram  grow p-3"></i></Link>
