@@ -32,6 +32,7 @@ import GetCosmetics from './store/products/cosmetics';
 
 
 
+
 class Navigation extends Component {
     render() {
         return (
