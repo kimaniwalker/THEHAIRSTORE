@@ -116,7 +116,7 @@ const FeaturedProducts = () => {
                             <div className="card-body">
 
                                 <div className="row justify-content-center">
-                                    <Link to={`/store`}><img className="grow" height="150px" width="150px" src="../../../images/home/wigs.PNG"></img></Link>
+                                    <Link to={`/store`}><img className="grow" height="150px" width="150px" src="../../../images/home/wigs.png"></img></Link>
 
                                 </div>
 
@@ -160,7 +160,7 @@ const FeaturedProducts = () => {
                             <div className="card-body">
 
                                 <div className="row justify-content-center">
-                                    <Link to={`/store`}><img className="grow" height="150px" src="../../../images/home/soap.PNG"></img></Link>
+                                    <Link to={`/store`}><img className="grow" height="150px" src="../../../images/home/soap.png"></img></Link>
 
                                 </div>
 
