@@ -6,10 +6,9 @@ const SalesPitch = () => {
 
     return (
         <main className="products">
-            <div className="container-fluid">
 
 
-                <div id="sideMenu" className="row align-items-center d-flex flex-wrap">
+                <div id="sideMenu" className="row align-items-center justify-content-center d-flex flex-wrap">
 
                     <div className="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
 
@@ -22,7 +21,7 @@ const SalesPitch = () => {
                             <h3 className="justify-content-center">Quick Response Time</h3>
                         </div>
 
-                        <div className="row justify-content-center">
+                        <div className="row justify-content-center p-4">
                             <h3 className="p-4">Have Any Questions Or Concerns ? Please feel free to reach out to our hotline. If we do not pickup , we will follow up within 24HRS</h3>
                         </div>
 
@@ -38,7 +37,7 @@ const SalesPitch = () => {
                             <h3 className="justify-content-center">Great Products</h3>
                         </div>
 
-                        <div className="row justify-content-center">
+                        <div className="row justify-content-center p-4">
                             <h3 className="p-4">Have Any Questions Or Concerns ? Please feel free to reach out to our hotline. If we do not pickup , we will follow up within 24HRS</h3>
                         </div>
 
@@ -55,14 +54,13 @@ const SalesPitch = () => {
                         </div>
 
 
-                        <div className="row justify-content-center">
+                        <div className="row justify-content-center p-4">
                             <h3 className="p-4">We do not handle any credit / debit card information. We let Stripe do all of the heavy lifting. Our site is secured through SSL. </h3>
                         </div>
 
                     </div>
                 </div>
 
-            </div>
         </main>
     )
 

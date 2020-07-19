@@ -4,10 +4,22 @@
 @import "../buttons";
 
 .products {
-
+    
     .card{
         border-color:transparent;
     }
+
+    @media only screen and (max-width: 850px) {
+        .card{
+            border: 0.04rem solid rgba(0,0,0,0.2);
+            box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.2);
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-right: 10px;
+            margin-left: 10px;
+        }
+    }
+
 
     .card-footer{
 
@@ -155,6 +167,43 @@
         background-image: url('../../../../images/home/blackModel2.jpg');
         background-size: cover;
         background-repeat: repeat;
+    }
+
+
+    @media only screen and (max-width : 850px) {
+    
+
+        .sideText:hover {
+            padding-top: 150px;
+            color: $dark
+            
+        }
+
+        #sideMenuLashes:hover {
+            height: 400px;
+            background-color: whitesmoke;
+            background-image: url('../../../../images/home/blackModel3.jpg');
+            background-size: cover;
+            background-repeat: repeat;
+        }
+    
+        #sideMenuCosmetics:hover {
+            height: 400px;
+            background-color: whitesmoke;
+            background-image: url('../../../../images/home/blackModel.jpg');
+            background-size: cover;
+            background-repeat: repeat;
+        }
+       
+        #sideMenuHair:hover {
+            height: 400px;
+            background-color: whitesmoke;
+            background-image: url('../../../../images/home/blackModel2.jpg');
+            background-size: cover;
+            background-repeat: repeat;
+        }
+    
+    
     }
 
     

@@ -51,40 +51,44 @@ const ProductStore = () => {
                         </div>
                         <div id="sideMenuCosmetics" className="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 bg-warning">
                             <a href='/cosmetics'>
-                            <div className="row justify-content-center sideText">
-                                <h2>Cosmetics</h2>
-                            </div>
+                                <div className="row justify-content-center sideText">
+                                    <h2>Cosmetics</h2>
+                                </div>
                             </a>
                         </div>
                     </div>
 
 
 
-                    <div className="container-fluid">
-                        <SalesPitch />
-                    </div>
-
-                    <div className="row">
-                    <AboutUsBanner />
-                    </div>
-
-
-                    <div>
-                        <div className="row">
-                            <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                <Contact2 />
-                            </div>
-                            <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                <VideoBanner />
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <Footer />
 
                 </div>
 
+                <div className="row justify-content-center">
+                    <SalesPitch />
+                </div>
+                    
+                
+                
+
+
+                <div className="row">
+                    <AboutUsBanner />
+                </div>
+
+
+                <div>
+                    <div className="row">
+                        <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            <Contact2 />
+                        </div>
+                        <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            <VideoBanner />
+                        </div>
+
+                    </div>
+                </div>
+
+                <Footer />
 
 
             </main>
