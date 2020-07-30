@@ -34,7 +34,6 @@ const ProductStore = () => {
 
 
                     <div className="row">
-
                         <div id="sideMenuHair" className="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 bg-primary">
                             <a href='/hair'><div className="row justify-content-center sideText">
                                 <h2>Hair</h2>
@@ -71,7 +70,7 @@ const ProductStore = () => {
                 
 
 
-                <div className="row">
+                <div className="row justify-content-center">
                     <AboutUsBanner />
                 </div>
 

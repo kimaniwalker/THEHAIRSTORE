@@ -1,11 +1,22 @@
-import React, { Fragment , useState } from 'react';
+import React, { Fragment , useState, useEffect } from 'react';
 import '../utils/scss/pages/_header.scss';
 import { Link } from 'react-router-dom';
 import AuthButton from './auth/authButton'; 
+import * as userService from "../services/user";
 
 const Header = () => {
 
     const [loggedIn,setLoggedIn] = useState(true);
+
+    useEffect(() => {
+        userService.checkLogin().then(loggedIn => {
+          if (loggedIn) {
+            setLoggedIn(true)
+          } else {
+            setLoggedIn(false);
+          }
+        });
+      }, []);
     
     $(window).on("scroll", function () {
         if ($(this).scrollTop() > 350) {
@@ -37,7 +48,7 @@ const Header = () => {
     <Link to="/cart"><i className="fas fa-shopping-cart  grow p-2">
     </i></Link>
      <Link to="/store"><i className="fas fa-store  grow p-3"></i></Link>
-     <Link to="/cart"><i className="fas fa-lock-open  grow p-3"></i></Link>
+     <Link to="/admin"><i className="fas fa-lock-open  grow p-3"></i></Link>
      <Link to="/cart"><i className="fab fa-facebook  grow p-3"></i></Link>
      <Link to="/cart"><i className="fab fa-instagram  grow p-3"></i></Link>
      <Link to="/cart"><i className="fab fa-snapchat  grow p-3"></i></Link>
@@ -61,14 +72,15 @@ const Header = () => {
                     </img>
                 </Link>
 
-                <h2 className="">Rose Beauty Boutique</h2>
                 
 <span>
-<Link to="/cart"><i className="fas fa-shopping-cart  grow p-2">
-</i></Link>
- <Link to="/cart"><i className="fas fa-store  grow p-2"></i></Link>
- <Link to="/cart"><i className="fas fa-bars  grow p-2"></i></Link>
- <Link to="/cart"><i className="fas fa-lock  grow p-2"></i></Link>
+ <Link to="/cart"><i className="fas fa-shopping-cart  grow p-2">
+    </i></Link>
+     <Link to="/store"><i className="fas fa-store  grow p-3"></i></Link>
+     <Link to="/login"><i className="fas fa-lock  grow p-3"></i></Link>
+     <Link to="/cart"><i className="fab fa-facebook  grow p-3"></i></Link>
+     <Link to="/cart"><i className="fab fa-instagram  grow p-3"></i></Link>
+     <Link to="/cart"><i className="fab fa-snapchat  grow p-3"></i></Link>
 </span>
                
             </nav>

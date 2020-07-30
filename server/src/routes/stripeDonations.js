@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { charge, retrieve, getCharges, getEvents, getWebHooks, createSession } from '../utils/stripeCharge'
+import { charge, retrieve, getCharges, getEvents, getWebHooks } from '../utils/stripeCharge'
 import stripeLoader from 'stripe';
 import { config } from '../config';
 require('isomorphic-fetch');
@@ -70,25 +70,45 @@ router.post('/', async (req, res) => {
 
 });
 
-router.post('/session', async (req, res) => {
+// Fetch the Checkout Session to display the JSON result on the success page
+router.get('/checkout-session', async (req, res) => {
+  const { sessionId } = req.query;
+  const session = await stripe.checkout.sessions.retrieve(sessionId);
+  res.send(session);
+});
 
+router.post('/create-checkout-session', async (req, res) => {
+  const { quantity, amount } = req.body;
+  // Create new Checkout Session for the order
+  // Other optional params include:
+  // [billing_address_collection] - to display billing address details on the page
+  // [customer] - if you have an existing Stripe Customer ID
+  // [payment_intent_data] - lets capture the payment later
+  // [customer_email] - lets you prefill the email input in the form
+  // For full details see https://stripe.com/docs/api/checkout/sessions/create
+  const session = await stripe.checkout.sessions.create({
+    payment_method_types: ['card'],
+    line_items: [
+      {
+        name: 'Pasha photo',
+        quantity: quantity,
+        currency: 'usd',
+        amount: amount, // Keep the amount on the server to prevent customers from manipulating on client
+      },
+    ],
+    mode: 'payment',
+    // ?session_id={CHECKOUT_SESSION_ID} means the redirect will have the session ID set as a query param
+    success_url: `http://localhost:3000/success/?session_id={CHECKOUT_SESSION_ID}`,
+    cancel_url: `http://localhost:3000/cancel/?session_id={CHECKOUT_SESSION_ID}`,
+  });
 
-  let name = req.body.name
-  let description = req.body.description
-  let amount = req.body.amount
-  let quantity = req.body.quantity
-  let success_url = req.body.success_url
-  let cancel_url = req.body.cancel_url
+  console.log(session);
 
+  res.send({
+    sessionId: session.id,
+  });
+});
 
-  try {
-    let sessionResponse = await createSession(name, description, amount, 
-      quantity, success_url, cancel_url);
-    res.send(sessionResponse);
-  } catch (e) {
-    console.log(e)
-  }
-})
 
 /* STRIPE CONNECT USER POST */
 router.post('/striperegister', async (req, res) => {

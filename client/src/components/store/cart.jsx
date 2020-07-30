@@ -159,6 +159,8 @@ const CartPage = (props) => {
 
             <div id="checkoutDiv" className="container-fluid cart">
 
+                {/*
+                Additional Add-ons Section
                 <div className="row mb-4 ml-3 mr-3 justify-content-center">
                     <h2>Additional Add-Ons</h2>
                 </div>
@@ -186,7 +188,7 @@ const CartPage = (props) => {
                             </div>
 
                 </div>
-
+ */}
 
                 <div className="row justify-content-center">
 

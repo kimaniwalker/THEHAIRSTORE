@@ -34,28 +34,28 @@ const DetailProduct = (props) => {
     <main className="productDetails pt-5">
         <div className="container-fluid">
             <div className="row">
-                <div className="col-7">
+                <div className="col-lg-7 col-7-xl col-7-md col-12-sm col-12-xs">
                     <div className="row justify-content-center">
-                      <img className="grow" src={store.itemImage}></img>  
+                      <img width="400px" className="grow" src={store.itemImage}></img>  
                     </div>
                 
                 </div>
-                <div className="col-3">
-                    <div className="row">
+                <div id="center" className="col-lg-3 col-xl-3 col-md-3">
+                    <div id="center" className="row">
                        <h2>{store.itemName}</h2>
                     </div>
-                    <div className="row py-3">
+                    <div id="center" className="row py-3">
                        <img width="125px" src={store.itemImage}></img>
                     </div>
 
-                    <div className="row py-2">
+                    <div id="center" className="row py-2">
                        <h3>Product Description : {store.itemDescription}</h3>
                     </div>
                     
-                    <div className="row py-2">
+                    <div id="center" className="row py-2">
                        <h3>Product Category: {store.itemCategory}</h3>
                     </div>
-                    <div className="row py-2">
+                    <div id="center" className="row py-2">
                        <h3>Price: {store.itemPrice} $</h3>
                     </div>
                     

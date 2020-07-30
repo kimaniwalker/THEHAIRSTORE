@@ -4,10 +4,10 @@
 @import "../buttons";
 
 .products {
-    
     .card{
         border-color:transparent;
     }
+    
 
     @media only screen and (max-width: 850px) {
         .card{
@@ -126,6 +126,7 @@
         background-color: whitesmoke;
         background-image: url('../../../../images/home/blackModel3.jpg');
         background-size: cover;
+        
 
     
     }
@@ -144,6 +145,8 @@
         color: $dark
         
     }
+
+   
 
     #sideMenuLashes:hover {
         height: 200px;

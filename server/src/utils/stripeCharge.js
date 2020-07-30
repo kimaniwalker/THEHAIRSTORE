@@ -17,25 +17,6 @@ function charge(token, amt, description, phone, email) {
   });
 };
 
-/*Create
-Session  */
-function createSession(name, description, amount, quantity, 
-  success_url, cancel_url) {
-
-  return stripe.checkout.sessions.create({
-    
-    success_url: success_url,
-    cancel_url: cancel_url,
-    line_items: {name: name,
-    payment_method_types: 'card',
-    description: description,
-    amount: amount * 100,
-    quantity: quantity}
-
-
-  })
-
-}
 
 /* RETRIEVE STRIPE BALANCE */
 function retrieve(err, balance) {
@@ -53,7 +34,7 @@ function retrieve(err, balance) {
     .catch((err) => {
       // Error
       console.log(err);
-    });
+    }); 
 };
 
 /* RETRIEVE CHARGES */
@@ -105,4 +86,4 @@ function getWebHooks(err, webhooks) {
 
 
 
-export { charge, retrieve, getCharges, getEvents, getWebHooks, createSession };
+export { charge, retrieve, getCharges, getEvents, getWebHooks };

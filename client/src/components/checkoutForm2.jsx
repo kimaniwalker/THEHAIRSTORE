@@ -1,12 +1,14 @@
 import React, { useState,useEffect } from 'react';
 import '../utils/scss/pages/_checkoutForm.scss';
 import { injectStripe } from 'react-stripe-elements';
-import { postCharge } from '../services/stripeService';
+import { postCharge} from '../services/stripeService';
 import CardSection from './cardSection';
 import { Route } from "react-router-dom";
 import useReactRouter from 'use-react-router';
 import { NotificationManager, NotificationContainer } from 'react-notifications';
 import IndeterminateProgress from './utilities/indeterminateProgress';
+import {loadStripe} from '@stripe/stripe-js';
+
 
 
 const CheckoutForm = (props) => {
@@ -14,6 +16,7 @@ const CheckoutForm = (props) => {
 
     const [customerName, setcustomerName] = useState('');
     const [amount, setamount] = useState(props.amount);
+    const [quantity,setQuantitiy] = useState(1);
     const [submitted, setsubmitted] = useState(false);
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('');
@@ -25,11 +28,16 @@ const CheckoutForm = (props) => {
     const [closure,setClosure] = useState(props.closure);
     const [frontal,setFrontal] = useState(props.frontal);
     const [coloring,setColoring] = useState(props.coloring);
+    const [sessionId,setSessionId] = useState('');
+    
     
                      
     const { history, location, match } = useReactRouter();
 
     const { from } =  { from: { pathname: "/" } };
+
+    const stripePromise = loadStripe('pk_test_5tdzast6E5DFrnFEcXHrRjRr001G2jS4Am');
+
     
     
 
@@ -42,6 +50,7 @@ const CheckoutForm = (props) => {
 
     const handleamount = (e) => {
         setamount(e.target.value);
+        console.log(amount);
     }
 
     const handlesubmitted = (e) => {
@@ -74,9 +83,32 @@ const CheckoutForm = (props) => {
         
     }
 
-    
+    const handleCheckout = async (e) => {
+        
+        e.preventDefault();
 
-   
+        try {
+            let res = await fetch('/api/donate/create-checkout-session', {
+                method: 'POST',
+                body: JSON.stringify({ amount, quantity }),
+                headers: new Headers({ "Content-Type": "application/json" })
+
+            });
+            let sessionResponse = await res.json();
+            console.log(sessionResponse)
+            setSessionId(sessionResponse);
+            console.log('Redirecting To Stripe ! See ya later' + sessionId)
+            const stripe = await stripePromise;
+            const { error } = await stripe.redirectToCheckout({
+            sessionId: sessionResponse.sessionId,
+    });
+
+            
+            
+        } catch (e) {
+            console.log(e)
+        }
+    }
 
 
     const handleSubmit = async (e) => {
@@ -112,6 +144,8 @@ const CheckoutForm = (props) => {
         }
     }
 
+    
+
 
     if (paymentPosted) {
         return <Route component={() => { 
@@ -133,7 +167,7 @@ const CheckoutForm = (props) => {
                             <i className="fas fa-donate fa-2x text-light"></i>
 
                         </div>
-                        <form onSubmit={(e) => handleSubmit(e)}>
+                        <form onSubmit={(e) => handleCheckout(e)}>
 
                             <div className="row mb-4 ml-3 mr-3">
                                 <input className="input-group"
