@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import Statement from '../statement'
 import Donate from '../donate'
 import '../../utils/scss/pages/_cart.scss'
+import { loadStripe } from '@stripe/stripe-js';
 
 
 const CartPage = (props) => {
@@ -11,6 +12,7 @@ const CartPage = (props) => {
     const cartTotals = props.cart.reduce((cartTotals, currentTotals) => cartTotals + (currentTotals.itemPrice * currentTotals.quantity), 0)
 
     const [total, setTotal] = useState(cartTotals)
+    const [cart, setCart] = useState(JSON.stringify(props.cart))
     const [wig, setWig] = useState(false)
     const [closure, setClosure] = useState(false)
     const [frontal, setFrontal] = useState(false)
@@ -19,6 +21,7 @@ const CartPage = (props) => {
     const [addonFrontal, setAddOnFrontal] = useState(false)
     const [addonColoring, setAddOnColoring] = useState(false)
     const [addonWig, setAddOnWig] = useState(0);
+    const [session, setSession] = useState([]);
 
     const [specialMessage, setSpecialMessage] = useState(false);
     const [message, setMessage] = useState('');
@@ -30,9 +33,10 @@ const CartPage = (props) => {
     }
 
     useEffect(() => {
-        
-       
+
+
         handleCheck();
+        console.log(cart);
 
     }, []);
 
@@ -42,7 +46,7 @@ const CartPage = (props) => {
             x.style.display = "none";
             console.log('testmf');
         } else {
-            
+
             x.style.display = "block";
         }
     }
@@ -113,7 +117,7 @@ const CartPage = (props) => {
     const addColoring = () => {
         console.log('here MF');
         var checkbox = document.getElementById('addColoring');
-        
+
 
         if (checkbox.checked == true) {
             console.log('checked')
@@ -121,8 +125,8 @@ const CartPage = (props) => {
             setAddOnColoring(25);
             $("#specialMessage").removeClass("hide");
             $("#specialMessage").addClass("show");
-           
-            
+
+
 
             console.log(coloring);
         } else {
@@ -132,8 +136,8 @@ const CartPage = (props) => {
             console.log(coloring);
             $("#specialMessage").removeClass("show");
             $("#specialMessage").addClass("hide");
-            
-           
+
+
         }
 
 
@@ -145,8 +149,37 @@ const CartPage = (props) => {
         console.log(message);
     }
 
+    const handleCheckout = async (e) => {
 
-    
+        const stripePromise = loadStripe('pk_test_5tdzast6E5DFrnFEcXHrRjRr001G2jS4Am');
+        /* e.preventDefault(); */
+
+        try {
+            let res = await fetch('/api/donate/create-checkout-session', {
+                method: 'POST',
+                body: JSON.stringify({ total, cart }),
+                headers: new Headers({ "Content-Type": "application/json" })
+
+            });
+            let sessionResponse = await res.json();
+            console.log(sessionResponse)
+            setSession(sessionResponse);
+            console.log('Redirecting To Stripe ! See ya later' + sessionResponse.sessionId)
+            const stripe = await stripePromise;
+            const { error } = await stripe.redirectToCheckout({
+                sessionId: sessionResponse.sessionId,
+            });
+
+
+
+        } catch (e) {
+            console.log(e)
+        }
+    }
+
+
+
+
 
     return (
         <Fragment>
@@ -155,7 +188,16 @@ const CartPage = (props) => {
             <Statement statement='My Cart' />
 
 
+        <div className="container-fluid">
+<div className="row justify-content-center">
             <Cart />
+        </div>
+            
+        </div>
+
+
+        
+            
 
             <div id="checkoutDiv" className="container-fluid cart">
 
@@ -194,7 +236,7 @@ const CartPage = (props) => {
 
 
 
-                    <button onClick={() => handleTotal()} type="button" className="btnPayment" data-toggle="modal" data-target=".bd-example-modal-lg">Proceed To Checkout : Total: ${cartTotals === 0 ? '0' : cartTotals + addonWig + addonFrontal + addonClosure + addonColoring}</button>
+                    <button onClick={() => handleCheckout()} type="button" className="btnPayment" /* data-toggle="modal" */ data-target=".bd-example-modal-lg">Proceed To Checkout : Total: ${cartTotals === 0 ? '0' : cartTotals + addonWig + addonFrontal + addonClosure + addonColoring}</button>
 
                     <div className="modal fade bd-example-modal-lg" tabIndex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
 
@@ -202,7 +244,7 @@ const CartPage = (props) => {
                             <div className="modal-content">
 
                                 <Donate amount={cartTotals + addonWig + addonClosure + addonFrontal + addonColoring}
-                                message={message} wig={wig} closure={closure} frontal={frontal} coloring={coloring}/>
+                                    message={message} wig={wig} closure={closure} frontal={frontal} coloring={coloring} />
                             </div>
                         </div>
                     </div>

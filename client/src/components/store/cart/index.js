@@ -31,7 +31,7 @@ const Cart = (props) => {
 
             <div className="col-lg-12">
 
-                <div className="row pt-2 justify-content-center d-flex flex-column flex-lg-row flex-md-row flex-sm-column flex-xs-column">
+                <div className="row pt-2 justify-content-center">
 
                     <div><img width="75px p-4" src={item.itemImage}></img></div>
                     <div><h3 className="p-4">{item.itemName}</h3></div>

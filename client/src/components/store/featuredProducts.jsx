@@ -28,7 +28,7 @@ const FeaturedProducts = () => {
                             <div className="card-body">
 
                                 <div className="row justify-content-center">
-                                    <Link to={`/store`}><img className="grow" height="150px" src="../../../images/home/lashes.png"></img></Link>
+                                    <Link to={`/lashes`}><img className="grow" height="150px" src="../../../images/home/lashes.png"></img></Link>
 
                                 </div>
 
@@ -36,13 +36,13 @@ const FeaturedProducts = () => {
 
                                 <div className="row justify-content-center">
                                     <div className="py-3">
-                                        <h3>Price: $125 - $250</h3>
+                                        <h3>Price: $10 - $50</h3>
                                     </div>
                                 </div>
 
                                 <div className="row justify-content-center">
                                     <div className="py-3">
-                                        <a href='/store'><button className="btn2">See More</button></a>
+                                        <a href='/lashes'><button className="btn2">View All</button></a>
                                     </div>
                                 </div>
 
@@ -86,7 +86,7 @@ const FeaturedProducts = () => {
 
                                 <div className="row justify-content-center">
                                     <div className="py-3">
-                                        <a href='/store'><button className="btn2">See More</button></a>
+                                        <a href='/store'><button className="btn2">View All</button></a>
                                     </div>
                                 </div>
 
@@ -116,7 +116,7 @@ const FeaturedProducts = () => {
                             <div className="card-body">
 
                                 <div className="row justify-content-center">
-                                    <Link to={`/store`}><img className="grow" height="150px" width="150px" src="../../../images/home/wigs.png"></img></Link>
+                                    <Link to={`/hair`}><img className="grow" height="150px" width="150px" src="../../../images/home/wigs.png"></img></Link>
 
                                 </div>
 
@@ -130,7 +130,7 @@ const FeaturedProducts = () => {
 
                                 <div className="row justify-content-center">
                                     <div className="py-3">
-                                        <a href='/store'><button className="btn2">See More</button></a>
+                                        <a href='/hair'><button className="btn2">View All</button></a>
                                     </div>
                                 </div>
 
@@ -160,7 +160,7 @@ const FeaturedProducts = () => {
                             <div className="card-body">
 
                                 <div className="row justify-content-center">
-                                    <Link to={`/store`}><img className="grow" height="150px" src="../../../images/home/soap.png"></img></Link>
+                                    <Link to={`/cosmetics`}><img className="grow" height="150px" src="../../../images/home/soap.png"></img></Link>
 
                                 </div>
 
@@ -168,13 +168,13 @@ const FeaturedProducts = () => {
 
                                 <div className="row justify-content-center">
                                     <div className="py-3">
-                                        <h3>Price: $125 - $250</h3>
+                                        <h3>Price: $10 - $75</h3>
                                     </div>
                                 </div>
 
                                 <div className="row justify-content-center">
                                     <div className="py-3">
-                                        <a href='/store'><button className="btn2">See More</button></a>
+                                        <a href='/cosmetics'><button className="btn2">View All</button></a>
                                     </div>
                                 </div>
 

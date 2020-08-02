@@ -33,10 +33,10 @@ const VideoBanner = () => {
 
     }, []);
 
-    return (<main className="videoBanner">
+    return (<main className="videoBanner m-4">
          <div id="" className="container-fluid">
              <div className="row justify-content-center py-4">
-                 <h1 className="text-light">Follow us on Instagram</h1>
+                 <h1 className="text-light justify-content-center">Follow us on Instagram</h1>
              </div>
   
   

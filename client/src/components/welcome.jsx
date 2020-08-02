@@ -14,6 +14,7 @@ import PortfolioScreen from './screens/Portfolio/portfolio';
 import FeaturedProducts from './store/featuredProducts';
 import VideoBanner from './videoBanner';
 import AboutUsBanner from './aboutUsBanner';
+import SalesPitch from './salesPitch';
 
 
 
@@ -34,44 +35,12 @@ class Welcome extends Component {
         <div className="welcome">
           <Header />
           <HomeBanner />
-          <div>
-          </div>
-
-
-          <div>
-
-
-<div className="container products-container">
-  <FeaturedProducts />
-
-</div>
-
-<VideoBanner />
-
-
-
-
-<Contact2 />
-<AboutUsBanner />
-
-{/* <div className="container products-container">
-  <ProductListing products={data.products} />
-
-</div>
-*/}
-<div>
-  <Footer />
-</div>
-
-
-</div>
-
-
-
-
-
-
-
+          <FeaturedProducts />
+          <Statement statement={'Welcome To Our Boutique'}/>
+          <ProductStore />
+          <Contact2 />
+          <Footer />
+          
         </div>
 
         

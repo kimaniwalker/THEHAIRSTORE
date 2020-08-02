@@ -39,9 +39,6 @@ const CheckoutForm = (props) => {
     const stripePromise = loadStripe('pk_test_5tdzast6E5DFrnFEcXHrRjRr001G2jS4Am');
 
     
-    
-
-
     const handlecustomerName = (e) => {
         setcustomerName(e.target.value);
         
@@ -201,11 +198,11 @@ const CheckoutForm = (props) => {
                                 />
                             </div>
 
-                            <CardSection />
+                            {/* <CardSection /> */}
 
 
                             <div className="row mb-4 mr-3 ml-3 pt-4 pb-3">
-                                <button type="submit" onClick={()=>handleConfirmTotal()} /* onMouseOver={()=>handleConfirmTotal()} */ className="btn btn-info mt-2">SUBMIT</button>
+                                <button type="submit" onClick={()=>handleConfirmTotal()} /* onMouseOver={()=>handleConfirmTotal()} */ className="btn btn-info mt-2">Proceed To Stripe</button>
                             </div>
 
 

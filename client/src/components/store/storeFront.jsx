@@ -20,7 +20,7 @@ const ProductStore = () => {
 
                 <div className="container-fluid">
 
-                    <div className="row">
+                    {/* <div className="row">
 
 
 
@@ -30,7 +30,7 @@ const ProductStore = () => {
 
                         </div>
 
-                    </div>
+                    </div> */}
 
 
                     <div className="row">
@@ -62,7 +62,7 @@ const ProductStore = () => {
 
                 </div>
 
-                <div className="row justify-content-center">
+                {/* <div className="row justify-content-center">
                     <SalesPitch />
                 </div>
                     
@@ -87,7 +87,7 @@ const ProductStore = () => {
                     </div>
                 </div>
 
-                <Footer />
+                <Footer /> */}
 
 
             </main>

@@ -78,7 +78,7 @@ router.get('/checkout-session', async (req, res) => {
 });
 
 router.post('/create-checkout-session', async (req, res) => {
-  const { quantity, amount } = req.body;
+  const { total, cart } = req.body;
   // Create new Checkout Session for the order
   // Other optional params include:
   // [billing_address_collection] - to display billing address details on the page
@@ -88,12 +88,15 @@ router.post('/create-checkout-session', async (req, res) => {
   // For full details see https://stripe.com/docs/api/checkout/sessions/create
   const session = await stripe.checkout.sessions.create({
     payment_method_types: ['card'],
+    metadata: [cart],
     line_items: [
       {
-        name: 'Pasha photo',
-        quantity: quantity,
+        name: 'Rose Beauty Boutique',
+        quantity: 1,
         currency: 'usd',
-        amount: amount, // Keep the amount on the server to prevent customers from manipulating on client
+        amount: total * 100
+         // Keep the amount on the server to prevent customers from manipulating on client
+        
       },
     ],
     mode: 'payment',
