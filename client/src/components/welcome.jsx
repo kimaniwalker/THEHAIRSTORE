@@ -9,12 +9,8 @@ import Statement from './statement';
 import Footer from './footer';
 import Contact2 from './screens/ContactUs/contact2';
 import ProductStore from './store/storeFront';
-import Quote from './quote';
-import PortfolioScreen from './screens/Portfolio/portfolio';
 import FeaturedProducts from './store/featuredProducts';
-import VideoBanner from './videoBanner';
-import AboutUsBanner from './aboutUsBanner';
-import SalesPitch from './salesPitch';
+
 
 
 

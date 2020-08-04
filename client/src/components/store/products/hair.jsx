@@ -111,7 +111,7 @@ const GetHair = () => {
                     </div>
                     <Footer />
 
-                =
+                
             </main>
         </Fragment>
     )

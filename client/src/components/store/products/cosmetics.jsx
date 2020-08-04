@@ -111,7 +111,7 @@ const GetCosmetics = () => {
                     </div>
                     <Footer />
 
-                =
+                
             </main>
         </Fragment>
     )

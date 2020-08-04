@@ -10,10 +10,8 @@ import Contact2 from './screens/ContactUs/contact2';
 import Donate from './donate';
 import RegisterScreen from './register2';
 import Welcome from './welcome';
-import StripeRegister from './striperegister';
 import CartPage from './store/cart';
 import DetailProduct from './store/detailProduct';
-import FeaturedProducts from './store/featuredProducts';
 import StoreFront from './store/storeFront';
 import getHair from './store/products/hair';
 import GetLashes from './store/products/lashes';
@@ -57,7 +55,7 @@ class Navigation extends Component {
                         <Route path="/logout" component={Logout} />
                         <Route exact path="/contact" component={Contact2} />
                         <Route exact path="/payment" component={Donate} /> 
-                        <Route path="/striperegister" component={StripeRegister} />
+                        
                         
                         <Route path="/me" component={UserDetailScreen} />
                         

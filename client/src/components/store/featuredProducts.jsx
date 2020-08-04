@@ -72,7 +72,7 @@ const FeaturedProducts = () => {
                             <div className="card-body">
 
                                 <div className="row justify-content-center">
-                                    <Link to={`/store`}><img className="grow" height="150px" src="../../../images/home/BODYWAVE.jpg"></img></Link>
+                                    <Link to={`/hair`}><img className="grow" height="150px" src="../../../images/home/BODYWAVE.jpg"></img></Link>
 
                                 </div>
 
