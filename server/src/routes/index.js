@@ -5,7 +5,6 @@ import contactRouter from './contactform';
 import stripeDonationsRouter from './stripeDonations';
 
 import { isLoggedIn, tokenMiddleware } from '../middleware/auth.mw';
-import StripeRegisterRouter from './stripeRegisterPost';
 import StripeChargesPostRouter from './stripeChargePost';
 import ProductsRouter from './products';
 
@@ -25,7 +24,6 @@ router.use('/auth', authRouter);
 router.use('/donate', stripeDonationsRouter);
 router.use('/contact', contactRouter);
 router.use('/users', usersRouter);
-router.use('/striperegisterpost', StripeRegisterRouter);
 router.use('/stripecharges', StripeChargesPostRouter);
 router.use('/products', ProductsRouter);
 
